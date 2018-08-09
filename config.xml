@@ -17,7 +17,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <preference name="StatusBarBackgroundColor" value="#d45c48" />
+    <preference name="StatusBarBackgroundColor" value="#f22f0d" />
     <preference name="orientation" value="portrait" />
     <preference name="SplashScreen" value="images/logo.png" />
     <preference name="AutoHideSplashScreen" value="true" />
