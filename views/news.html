@@ -1,0 +1,24 @@
+<ons-page id="news-page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">My Feed</div>
+        <div class="right">
+            <ons-toolbar-button onclick="fn.navigator.pushPage('views/about.html')">
+                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <ons-search-input id="search-feeds-news-list-items" placeholder="Search for news"></ons-search-input>
+    <ons-progress-bar value="0" id="news-page-progress"></ons-progress-bar>
+    <ons-list id="news-list-lazy-repeat">
+        <ons-lazy-repeat id="news-list"></ons-lazy-repeat>
+    </ons-list>
+    <ons-fab id="add-feed-btn" position="bottom right">
+        <ons-icon icon="md-plus">
+        </ons-icon>
+    </ons-fab>
+</ons-page>

@@ -1,0 +1,51 @@
+<ons-page id="specific-news-item-page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" id="specific-news-item-page-toolbar-title">Item</div>
+        <div class="right">
+            <ons-toolbar-button onclick="fn.navigator.pushPage('views/about.html')">
+                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div>
+        <div>
+            <ons-list>
+                <ons-list-item>
+                    <div class="left">
+                        <img id="specific-news-item-page-icon" class="list-item__thumbnail">
+                    </div>
+                    <div class="center">
+                        <span id="specific-news-item-page-title" class="list-item__title"></span>
+                        <span class="list-item__subtitle">
+                            <div id="specific-news-item-page-feed-title"></div>
+                            <div id="specific-news-item-page-author"></div>
+                            <div id="specific-news-item-page-time"></div>
+                        </span>
+                    </div>
+                    <div class="right">
+                        <ons-fab id="specific-news-item-page-link-fab" modifier="mini">
+                            <ons-icon icon="md-link"></ons-icon>
+                        </ons-fab>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="center">
+                        <p id="specific-news-item-page-description">
+
+                        </p>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="center">
+                        <p id="specific-news-item-page-content">
+
+                        </p>
+                    </div>
+                </ons-list-item>
+            </ons-list>
+        </div>
+    </div>
+</ons-page>

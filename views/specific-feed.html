@@ -1,0 +1,40 @@
+<ons-page id="specific-feed-page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" id="specific-feed-page-toolbar-feed-title">Feed</div>
+        <div class="right">
+            <ons-toolbar-button onclick="fn.navigator.pushPage('views/about.html')">
+                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div>
+        <div id="specific-feed-page-content">
+            <ons-list>
+                <ons-list-item>
+                    <div class="left">
+                        <img id="specific-feed-page-icon" class="list-item__thumbnail">
+                    </div>
+                    <div class="center">
+                        <span id="specific-feed-page-title" class="list-item__title"></span>
+                        <span class="list-item__subtitle" style="opacity: 1">
+                            <span id="specific-feed-page-description" style="opacity: 0.75"></span>
+                            <br>
+                            <ons-button id="specific-feed-page-unsubscribe">Unsubscribe</ons-button>
+                            &nbsp;
+                            <ons-fab id="specific-feed-page-link-fab" modifier="mini">
+                                <ons-icon icon="md-link"></ons-icon>
+                            </ons-fab>
+                        </span>
+                    </div>
+                </ons-list-item>
+                <ons-list-header>News</ons-list-header>
+                <div id="specific-feed-page-items">
+
+                </div>
+            </ons-list>
+        </div>
+    </div>
+</ons-page>

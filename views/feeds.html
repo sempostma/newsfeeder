@@ -1,0 +1,36 @@
+<ons-page id="feeds-page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">Feeds</div>
+        <div class="right">
+            <ons-toolbar-button onclick="fn.navigator.pushPage('views/about.html')">
+                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div>
+        <ons-search-input placeholder="Search for feeds" id="search-feeds-items"></ons-search-input>
+        <ons-list>
+            <ons-list-header>Feeds</ons-list-header>
+            <div id="feeds-list">
+
+            </div>
+            <ons-list-header>Recommended</ons-list-header>
+            <div id="recommended-feeds-items">
+
+            </div>
+            <ons-list-header>Sources</ons-list-header>
+            <div id="recommended-sites-items">
+
+            </div>
+        </ons-list>
+    </div>
+    <ons-fab id="add-feed-btn-feeds-page" position="bottom right">
+        <ons-icon icon="md-plus">
+        </ons-icon>
+    </ons-fab>
+</ons-page>

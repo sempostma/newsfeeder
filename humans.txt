@@ -1,0 +1,66 @@
+/* http://humanstxt.org/ */
+/* TEAM */
+    Developer: Sem Postma
+    From: Oosterhout, Noord Brabant, The Netherlands
+    Contact: sem.postma@gmail.com
+    
+    Developer: Sem Postma
+    From: Oosterhout, Noord Brabant, The Netherlands
+    Contact: sem.postma@gmail.com
+
+
+/* SITE */
+    Last update: 2018/08
+    Language: Dutch/English
+    Standards: HTML5, CSS3, ES6
+    Software: Cordova, Github Pages, OnsenUI
+    Doctype: HTML
+    IDE: VSCode, Git-Bash, Git, Gimp, Photoshop
+    
+
+                                            ,ggggg@@BNggggpggg,,,
+                                     ,g@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Ngg,
+                                ,g@@@@@@@BPP][P][P]DL}]Lj[FU|[D]%BNB@@@@@@Bp,
+                            ,g@@@@@@R$(p\U@NMMPBB\]]]@@@W@[$NM@NgQ(C)7A]$@@@@@@Ng
+                         g@@@@@BM\\VgA@,Pb$]]@@@@B@}$@@@@@N]]]]j]@@@@$MNgQv/AD$@@@@N,
+                      ,@@@@@&[A\@@$]uB@@@,P/]@@@@@@]]$@@@@hU`hDQCChC@p$R$P@$w/AQ7$@@@@@g
+                    g@@@@PQ))MCA@@B\@QCPA$CAW$@@@@$\[@]PPQK@N@@@@[[gP$]p@[C@hD@@@g$7%@@@@N
+                  g@@@@bX\N]]@@[[[]]]Q@[@@g@@P)$4Az]]]@P/@@@@@@@@@CB[]%$$]]&]]@@,@@$@@ZR@@@@,
+                g@@@PQQ)$@@p]pR*Q$@@@@@Z*4Q$$]"gy[PhhPKP"@@@@@@@@@@&*%D4&$g$[@Cg@Pg@P@Q^-$@@@@,
+              g@@@K\\N$@P$$g@@@B$W*""*~ZRBb,"Q%@@@$$P/@P/]@@@@@@@B6Py@NB@w"w$&@P2@@)@@@MgZZ%@@@@
+             @@@RX$@y"g@P$wr^"       ,  -"w"BBQv%@$gP,42AN)"PPK[[QC@P@ `W$B@NQ*B$$@@$g`^yB@jF%@@@W
+           /@@@Bgg[hP@@/              *g    "w%@QK@]\@@pw"A@@C//CF@@$B    "v[*R@N@*DSA4gg]d*@d]B@@@g
+          g@@PSX@C`P B@@    ,          'Bp    "C%@,X$@@P/,Qr/)"CPg@]- %,      '"MZBN/yPD**``\@@O]@@@@
+         @@@bqQP,"W]],%@NNg@Bg]     ,@NBN@p     *Q%@ Vb^^p$$~-$P@@y-    `*"""**Ng ]]@]].@J$N*[]KP$B@@@
+        @@@b1$C`y@@w pZ*v==wJ@WC   ][  ,,]@       *Q%@BNggppppp@N/            @B,"BR@UD C:]@=F{J@]P$@@@
+       @@@Bp]Q@gg*P^^gPggggP]]@Py  ]@mg   @P        `''"`"""""""`            ]  ]K @$PPp-Ng>Jw@-@@@pN@@@
+      $@@Kbg@@@@@@P#@LBKjK4C/3A@gV  *N  - $`     .^    ,g,=     w            @  g  $$@]]]@@""%$*~g@pF$@@K
+     ]@@@3gP@@@@BNg,\@@@@@@@@)]'@Kt   "Mw      /   ,,@$N`         N,         P g"  'P@Kt\7gNp%Kg@@@@pF$@@p
+     @@@b-@'LN -y%*y@@@@@@@@@@@AP@N"w         2`gMP /*'             *g      ] @`  ,r]"@@t\]$]@@@@@@@@]&@@@
+    @@@Kz]wg,  M\-,$@@@@@@@@@@@Z]r%@w,N       ,@,,"                   %g     @-   $  ]]@pLg@@@@@@PJ@@p%%@@P
+   ]@@@PK$-(;A-ygp.$@@@@@@@@@@B,Cg@Cg`       4P @'                     @@   @     P   [$@]]@@@@]g@@@@@[]@@@
+   ]@@@7D@~,B@ 7"". $%@@@@@@B7hP@@)@g       g"gP   m==r"""*$wp         $ "y      ]  ,PP@@]]@$g@@@@@@@@F]@@@
+   ]@@@4KCN^".$gP]C", `g.t,;]*PP@@]@$@P    [ @"     ``""*~,,@          $%  ",    BmP"]]@ P@@@@@@@@@@P]F-@@@
+   ]@@@E&P*$@-"[.^ #$%--'@@@@@PP$@-$BM"  / gP    ,g@@@@@N, "           * *          /]@QC@@@@@@@@@$@@@@~@@@
+   ]@@KAbK;,, "`,RC ^]@@p]@@@CU-@@ @   /,@C      Bg@@@@@A"              ,]"^,      N/@@"/@@@@@B@@@@@P]@P@@@`
+   ]@@@4%$+ ^, ,yp~  *Py 2-z^e,@@Q@^ A$*-                                         C  QB@]A$$g@@@@P,g@@@~@@@-
+    @@@mE$--$- P@b `C`*[eSe$g@$w" .*"                                            [    P@K%$@BP$g@@@P$g@&@@@-
+    $@@@EBP$ ~gp" NCJ^wj@@P$e",w"                                                     ]]@PCg@@N*,g@@@@$$@@@
+    ]@@@"Q$  "]C#,^w"g@P$@CrY``                                                        [$@"@]g@@@P$g@@N@@@@
+     $@@pmA,];g~QP)@N$P""""MNg                                                 ^`      ]J@-PQ$g@@@@@@Bg@@@P
+     ]@@@~~$ ,,]$]@PC      ,,]K                                ,,   ""^     ,wP^        C@K[@@@@Pj]@Tq@@@@`
+      $@@ps1K&@gpr@@]Pr w,,C gC                      ,,  "D^-~..J~  ``     ]m"          [@@]$gg@@@@b4$@@@P
+       @@@EE$B@@@Q/@@/W    gP  --  www,,                 ``"*         ,pP*              ]$@]$@@NP$E4$@@@@
+       "@@@BE4@@@@@V$BN[N"`    "  w"m    ]Nm`                       "-                  ]]@]@@@@@K$#@@@@
+        '@@@K@p%@@@@@PB@U@'""**M=ww4m**[     *N,       ,,wm^                            ]]@][g@gS4$@@@@
+          %@@@m=%$$@gQpB@]$PmmwwwwgggNwwNmNMP""""C"""`                                  ]#@]]@@$g@@@@P
+           "@@@Dc$@@@R$%Q$MRNB@@@@@@@PL  "w`                                             P@PN$b&@@@@C
+             %@@Np[R@@@@P$@@B@$@@@%]@@gp A                                               [$@]$@@@@@
+              "B@@D%$$g@@@B@@@@@@@BA$@@P@4w-                                             ]]@g@@@@`
+                "B@@gp]$g@@@@@@@$g@@@"/`"' L                                              @@@@@C
+                  *@@@@@@R@@P"g@@P$r`                                                     $@@C
+                    *B@@@g$g@N$^`                                                         @P`
+                      "%@@@@^-                                                            P
+                       ,4"                                                                P
+                    >"-
+                 ."

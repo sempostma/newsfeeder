@@ -1,0 +1,23 @@
+<ons-page id="splitter">
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+            <ons-page>
+                <ons-list>
+                    <ons-list-item onclick="fn.load('views/news.html')" tappable>
+                        My Feed
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('views/feeds.html')" tappable>
+                        Feeds
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('views/recommended.html')" tappable>
+                        Recommended
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.navigator.pushPage('views/about.html')" tappable>
+                        About
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="views/news.html"></ons-splitter-content>
+    </ons-splitter>
+</ons-page>
