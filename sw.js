@@ -1,5 +1,5 @@
 
-var STATIC_CACHE = 'static-cache-v1';
+var STATIC_CACHE = 'static-cache-v2';
 
 // listen for outgoing network request
 self.addEventListener('fetch', function (event) {
