@@ -1,5 +1,5 @@
 
-var STATIC_CACHE = 'static-cache-v3';
+var STATIC_CACHE = 'newsfeeder-static-cache-v4';
 
 // listen for outgoing network request
 self.addEventListener('fetch', function (event) {
