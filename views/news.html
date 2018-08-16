@@ -21,4 +21,19 @@
         <ons-icon icon="md-plus">
         </ons-icon>
     </ons-fab>
+
+    <div style="display: none" id="news-list-lazy-repeat-template-wrapper">
+        <ons-list-item tappable modifier="chevron">
+            <div class="left">
+                <img class="list-item__thumbnail" onerror="this.src='images/iconnotfound.png'">
+            </div>
+            <div class="center" style="width: 100%;">
+                <span class="list-item__title overflow-ellipsis" style="padding-right: 50px;"></span>
+                <span class="list-item__subtitle" style="width: 100%;">
+                    <span class="subtitle-feed-title">weer.nl: Weer in het Nieuws</span>
+                    <div class="subtitle-description overflow-ellipsis">Het wordt snikheet!</div>
+                    <span class="subtitle-timeago">1 week ago</span></span>
+            </div>
+        </ons-list-item>
+    </div>
 </ons-page>
