@@ -3,14 +3,7 @@
 
 <head>
 
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src ws: 'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com http://*.tile.osm.org https://*.googleapis.com; 
-        style-src 'self' 'unsafe-inline' https://*.gstatic.com http://*.tile.osm.org https://*.googleapis.com;
-        media-src *; 
-        font-src 'self' https://*.gstatic.com http://*.tile.osm.org https://*.googleapis.com;
-        img-src 'self' data: https://* http://*;
-        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.polyfill.io https://*.gstatic.com http://*.tile.osm.org https://maps.googleapis.com;
-        connect-src 'self' https://feeds.feedburner.com https://cors-anywhere.herokuapp.com https://thingproxy.freeboard.io https://*.teleport.org https://epsg.io https://*.nationaalgeoregister.nl https://*.gstatic.com https://*.googleapis.com; ">
+    <meta http-equiv="Content-Security-Policy" content="default-src ws: 'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com http://*.tile.osm.org https://*.googleapis.com ws: 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://*.gstatic.com http://*.tile.osm.org https://*.googleapis.com; media-src *; font-src 'self' https://*.gstatic.com http://*.tile.osm.org https://*.googleapis.com; img-src 'self' data: https://* http://*; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.polyfill.io https://*.gstatic.com http://*.tile.osm.org https://maps.googleapis.com; connect-src 'self' https://feeds.feedburner.com https://cors-anywhere.herokuapp.com https://thingproxy.freeboard.io https://*.teleport.org https://epsg.io https://*.nationaalgeoregister.nl https://*.gstatic.com https://*.googleapis.com;">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -56,14 +49,9 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
 
-    <link rel="preload" as="script" href="js/app.min.js">
-    <link rel="preload" as="script" href="cordova.js">
-
     <link rel="preload" as="style" href="css/font_awesome/css/font-awesome.min.css">
     <link rel="preload" as="style" href="css/ionicons/css/ionicons.min.css">
     <link rel="preload" as="style" href="css/material-design-iconic-font/css/material-design-iconic-font.min.css">
-
-    <!-- cordova plugins -->
     <link rel="preload" as="script" href="cordova_plugins.js">
     <link rel="preload" as="script" href="plugins/cordova-plugin-device/www/device.js">
     <link rel="preload" as="script" href="plugins/cordova-plugin-dialogs/www/notification.js">
@@ -71,11 +59,28 @@
     <link rel="preload" as="script" href="plugins/cordova-plugin-headercolor/www/HeaderColor.js">
     <link rel="preload" as="script" href="plugins/cordova-plugin-statusbar/www/statusbar.js">
     <link rel="preload" as="script" href="plugins/cordova-plugin-splashscreen/www/splashscreen.js">
-
+    <link rel="preload" as="font" crossorigin="anonymous" href="css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous" href="css/ionicons/fonts/ionicons.ttf">
+    <link rel="preload" as="script" href="https://cdn.polyfill.io/v2/polyfill.min.js">
     <link rel="preload" as="image" href="images/logo.png">
-
-    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2">
-    <link rel="preload" as="font" type="font/ttf" crossorigin="anonymous" href="css/ionicons/fonts/ionicons.ttf">
+    <link rel="preload" as="script" href="plugins/cordova-plugin-device/src/browser/DeviceProxy.js">
+    <link rel="preload" as="script" href="plugins/cordova-plugin-dialogs/www/browser/notification.js">
+    <link rel="preload" as="script" href="plugins/cordova-plugin-statusbar/src/browser/StatusBarProxy.js">
+    <link rel="preload" as="script" href="plugins/cordova-plugin-splashscreen/src/browser/SplashScreenProxy.js">
+    <link rel="preload" as="image" href="images/chrome-enable-pwa.png">
+    <link rel="preload" as="image" href="images/menu.png">
+    <link rel="preload" as="image" href="images/recommended.png">
+    <link rel="preload" as="image" href="images/recommended-2.png">
+    <link rel="preload" as="image" href="images/news-feed-initial.png">
+    <link rel="preload" as="image" href="images/news-feed-loading.png">
+    <link rel="preload" as="image" href="images/news-feed.png">
+    <link rel="preload" as="image" href="images/news-search.png">
+    <link rel="preload" as="image" href="images/search-feed.png">
+    <link rel="preload" as="image" href="images/add-feed-loading.png">
+    <link rel="preload" as="image" href="images/add-feed.png">
+    <link rel="preload" as="image" href="images/news-feed-added-item.png">
+    <link rel="preload" as="image" href="images/feeds.png">
+    <link rel="preload" as="script" href="js/browser.js">
 
     <link rel="preconnect" href="https://cors-anywhere.herokuapp.com/">
 
@@ -92,7 +97,7 @@
                     <p class="noscript-msg" style="box-sizing: border-box;">
                         You are using an
                         <strong class="text-danger">outdated</strong> browser.
-                        <a href="http://browsehappy.com/" class="text-success" style="style="background-color: transparent; color: rgb(1, 111, 185); box-sizing: border-box; text-decoration: none;">upgrade your browser</a> to improve your experience.
+                        <a target="_system" href="http://browsehappy.com/" class="text-success" style="style="background-color: transparent; color: rgb(1, 111, 185); box-sizing: border-box; text-decoration: none;">upgrade your browser</a> to improve your experience.
                     </p>
                 </div>
             </div>
@@ -106,7 +111,7 @@
                 <p class="noscript-msg" style="box-sizing: border-box; ;">
                     This website requires javascript.
                     <br>
-                    <a href="https://www.enable-javascript.com/" target="_blank" class="text-primary" style="background-color: transparent; color: rgb(1, 111, 185); box-sizing: border-box; text-decoration: none; ;">
+                    <a target="_system" href="https://www.enable-javascript.com/" class="text-primary" style="background-color: transparent; color: rgb(1, 111, 185); box-sizing: border-box; text-decoration: none; ;">
                         You can find instructions on how to enable javascript here</a>.
                 </p>
             </div>

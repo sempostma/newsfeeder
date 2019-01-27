@@ -1,4 +1,4 @@
-if (navigator['serviceWorker']) {
+if (navigator['serviceWorker'] && location.host.includes('localhost') === false) {
     navigator.serviceWorker.register('./sw.js', { scope: './' }).then(function (registration) {
         console.log('Service worker successfully registered on scope', registration.scope);
 

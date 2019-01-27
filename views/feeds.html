@@ -8,25 +8,30 @@
         <div class="center">Feeds</div>
         <div class="right">
             <ons-toolbar-button onclick="fn.navigator.pushPage('views/about.html')">
-                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
+                <ons-icon icon="ion-help"></ons-icon>
             </ons-toolbar-button>
         </div>
     </ons-toolbar>
     <div>
         <ons-search-input placeholder="Search for feeds" id="search-feeds-items"></ons-search-input>
         <ons-list>
+            <ons-list-header>OPML</ons-list-header>
+            <div id="feeds-page-acitions">
+                <ons-list-item tappable onclick="fn.navigator.pushPage('views/add-opml.html')">
+                    <div class="left"><ons-icon style="font-size: 26px; margin-bottom: -4px" icon="icon-opml"></ons-icon></div>
+                    <div class="center">Import OPML</div>
+                </ons-list-item>
+                <ons-list-item tappable onclick="fn.navigator.pushPage('views/download-opml.html')">
+                    <div class="left"><ons-icon style="font-size: 26px" icon="md-download"></ons-icon></div>
+                    <div class="center">Export OPML</div>
+                </ons-list-item>
+            </div>
             <ons-list-header>Feeds</ons-list-header>
-            <div id="feeds-list">
-
-            </div>
+            <div id="feeds-list"></div>
             <ons-list-header>Recommended</ons-list-header>
-            <div id="recommended-feeds-items">
-
-            </div>
+            <div id="recommended-feeds-items"></div>
             <ons-list-header>Sources</ons-list-header>
-            <div id="recommended-sites-items">
-
-            </div>
+            <div id="recommended-sites-items"></div>
         </ons-list>
     </div>
     <ons-fab id="add-feed-btn-feeds-page" position="bottom right">

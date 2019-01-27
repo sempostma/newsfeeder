@@ -15,7 +15,7 @@
             <ons-list>
                 <ons-list-item>
                     <div class="left">
-                        <img id="specific-news-item-page-icon" class="list-item__thumbnail">
+                        <img id="specific-news-item-page-icon" class="list-item__thumbnail" onerror="handleerroriconnotfound()">
                     </div>
                     <div class="center">
                         <span id="specific-news-item-page-title" class="list-item__title"></span>
@@ -33,16 +33,19 @@
                 </ons-list-item>
                 <ons-list-item>
                     <div class="center">
-                        <p id="specific-news-item-page-description" class="user-select-text">
-
-                        </p>
+                        <div id="specific-news-item-page-enclosures" 
+                            style="width: 100%">
+                        </div>
+                        <div id="specific-news-item-page-description" 
+                            class="user-select-text" 
+                            style="width: 100%"></div>
                     </div>
                 </ons-list-item>
                 <ons-list-item>
                     <div class="center">
-                        <p id="specific-news-item-page-content user-select-text">
-
-                        </p>
+                        <div id="specific-news-item-page-content" 
+                            class="user-select-text" 
+                            style="width: 100%"></div>
                         <a id="specific-news-item-page-content-link" style="display: none" class="button" target="_system">
                             <ons-icon icon="md-link"></ons-icon> View entire article
                         </a>
