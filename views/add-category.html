@@ -1,0 +1,34 @@
+<ons-page id="add-category-page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div id="add-category-page-title" class="center">Add Category</div>
+        <div class="right">
+            <ons-toolbar-button id="add-category-toolbar-button">
+                <ons-icon icon="md-check"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div>
+        <ons-list>
+            <ons-list-item class="category-sub-category-add">
+                <div class="left">
+                    <ons-icon icon="md-collection-plus"></ons-icon>
+                </div>
+                <div class="center">
+                    <div>
+                        <h3>Name of the Category</h3>
+                        <ons-input id="add-category-title" required placeholder="Name your category..." type="text" name="categoryname"
+                            minlength="3" maxlength="30" style="width: 350px; max-width: 100%"></ons-input>
+                    </div>
+                </div>
+                <div class="right"></div>
+            </ons-list-item>
+            <div id="add-category-page-items-to-add"></div>
+            <ons-list-item>
+                <ons-button id="add-category-button">Done</ons-button>
+            </ons-list-item>
+        </ons-list>
+    </div>
+</ons-page>

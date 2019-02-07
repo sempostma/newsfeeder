@@ -1,19 +1,78 @@
 <ons-page id="splitter">
     <ons-splitter>
-        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
-            <ons-page>
+        <ons-splitter-side id="menu" side="left" width="320px" collapse swipeable>
+            <ons-page id="splitter-side-content">
                 <ons-list>
                     <ons-list-item onclick="fn.load('views/news.html')" tappable>
-                        <ons-icon icon="md-email-open"></ons-icon>&nbsp; My Feed
+                        <div class="left">
+                            <ons-icon icon="md-email-open"></ons-icon>
+                        </div>
+                        <div class="center">My Feed</div>
+                    </ons-list-item>
+                    <ons-list-item tappable expandable>
+                        <div class="expandable-content">
+                            <ons-list>
+                                <ons-list-item>
+                                    <div class="left">
+                                        <ons-icon icon="md-folder-star"></ons-icon>
+                                    </div>
+                                    <div class="center">Favorites</div>
+                                </ons-list-item>
+                                <div id="splitter-category-items"></div>
+                                <ons-list-item tappable 
+                                    onclick="fn.category.load('views/category.html', {category: []})">
+                                    
+                                    <div class="left">
+                                        <ons-icon icon="md-folder-outline"></ons-icon>
+                                    </div>
+                                    <div class="center">Uncategorized</div>
+                                </ons-list-item>
+                                <ons-list-item tappable 
+                                    onclick="fn.navigator.pushPage('views/add-category.html', {data: {path: []}})">
+                                    
+                                    <div class="left">
+                                        <ons-icon icon="md-plus-circle"></ons-icon>
+                                    </div>
+                                    <div class="center">Create Category</div>
+                                </ons-list-item>
+                            </ons-list>
+                        </div>
+                        <div class="left">
+                            <ons-icon icon="md-folder"></ons-icon>
+                        </div>
+                        <div class="center">
+                            Categories
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('views/bookmarks.html')" tappable>
+                        <div class="left">
+                            <ons-icon icon="md-bookmark"></ons-icon>
+                        </div>
+                        <div class="center">Bookmarks</div>
                     </ons-list-item>
                     <ons-list-item onclick="fn.load('views/feeds.html')" tappable>
-                        <ons-icon icon="md-collection-text"></ons-icon>&nbsp; Feeds
+                        <div class="left">
+                            <ons-icon icon="md-collection-text"></ons-icon>
+                        </div>
+                        <div class="center">Feeds</div>
                     </ons-list-item>
                     <ons-list-item onclick="fn.load('views/recommended.html')" tappable>
-                        <ons-icon icon="md-badge-check"></ons-icon>&nbsp; Recommended
+                        <div class="left">
+                            <ons-icon icon="md-badge-check"></ons-icon>
+                        </div>
+                        <div class="center">Recommended</div>
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('views/storage.html')" tappable>
+                        <div class="left">
+                            <ons-icon icon="md-storage"></ons-icon>
+                        </div>
+                        <div class="center">Storage</div>
                     </ons-list-item>
                     <ons-list-item onclick="fn.navigator.pushPage('views/about.html')" tappable>
-                        <ons-icon icon="md-info-outline"></ons-icon>&nbsp; About
+                        <div class="left">
+                            <ons-icon icon="md-info-outline"></ons-icon>
+                        </div>
+                        <div class="center">About</div>
                     </ons-list-item>
                 </ons-list>
             </ons-page>
