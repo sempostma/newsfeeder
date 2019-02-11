@@ -21,7 +21,7 @@
     <preference name="webviewbounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="orientation" value="portrait" />
-    <preference name="SplashScreen" value="images/logo.png" />
+    <preference name="SplashScreen" value="logo.png" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="500" />
     <preference name="SplashScreenBackgroundColor" value="#ffffff" />

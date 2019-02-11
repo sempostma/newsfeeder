@@ -78,15 +78,15 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "cordova-plugin-browsersync": "0.1.7",
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-dialogs": "2.0.1",
     "cordova-plugin-extension": "1.5.4",
-    "cordova-plugin-admobpro": "2.37.2",
+    "cordova-plugin-admobpro": "2.31.6",
     "cordova-plugin-headercolor": "1.0",
     "cordova-plugin-statusbar": "2.4.2",
-    "cordova-plugin-splashscreen": "5.0.2",
-    "cordova-plugin-browsersync": "0.1.7"
+    "cordova-plugin-splashscreen": "5.0.2"
 }
 // BOTTOM OF METADATA
 });
