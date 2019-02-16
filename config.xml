@@ -20,6 +20,7 @@
     <preference name="StatusBarBackgroundColor" value="#f22f0d" />
     <preference name="webviewbounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="HeaderColor" value="#f5593d" />
     <preference name="orientation" value="portrait" />
     <preference name="SplashScreen" value="logo.png" />
     <preference name="AutoHideSplashScreen" value="true" />
