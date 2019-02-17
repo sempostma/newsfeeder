@@ -9,7 +9,7 @@
     <author email="polyismstudio@gmail.com" href="https://esstudio.site/">
         Sem Postma
     </author>
-    <content src="browser-sync-start.html" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http:*" />
     <allow-intent href="https:*" />
@@ -28,5 +28,4 @@
     <preference name="SplashScreenBackgroundColor" value="#ffffff" />
     <preference name="SplashScreenWidth" value="256" />
     <preference name="SplashScreenHeight" value="256" />
-    <allow-navigation href="*" />
 </widget>
