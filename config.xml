@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.EchoSierraStudio.Newsfeeder" version="1.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.EchoSierraStudio.Newsfeeder" version="1.2.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Newsfeeder</name>
     <description>
         The easiest way to follow news from your favorite websites and blogs and news sites. 
         Easily search for news on multiple platforms, find feeds on popular websites and more. 
         Also works as a classic RSS/Atom reader.
     </description>
-    <author email="polyismstudio@gmail.com" href="https://esstudio.site/">
+    <author email="info@esstudio.site" href="https://esstudio.site/">
         Sem Postma
     </author>
     <content src="index.html" />
@@ -20,7 +20,9 @@
     <preference name="StatusBarBackgroundColor" value="#f22f0d" />
     <preference name="webviewbounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackgroundColor" value="0xfff5593d" />
     <preference name="HeaderColor" value="#f5593d" />
+    <preference name="windows-target-version" value="10.0" />
     <preference name="orientation" value="portrait" />
     <preference name="SplashScreen" value="logo.png" />
     <preference name="AutoHideSplashScreen" value="true" />

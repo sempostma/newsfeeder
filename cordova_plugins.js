@@ -302,13 +302,13 @@ module.exports.metadata =
     "cordova-plugin-headercolor": "1.0",
     "cordova-plugin-statusbar": "2.4.2",
     "cordova-plugin-splashscreen": "5.0.2",
-    "cordova-plugin-browsersync": "0.1.7",
     "cordova-android-play-services-gradle-release": "2.0.0",
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-inappbrowser": "3.0.0",
     "cordova-plugin-file-opener2": "2.2.0",
     "es6-promise-plugin": "4.2.2",
-    "cordova-plugin-x-socialsharing": "5.4.4"
+    "cordova-plugin-x-socialsharing": "5.4.4",
+    "cordova-plugin-browsersync": "0.1.7"
 }
 // BOTTOM OF METADATA
 });
