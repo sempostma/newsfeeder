@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="nl-NL">
-
+<html lang="EN">
 <head>
-
-    <meta http-equiv="Content-Security-Policy" content="default-src http://localhost:3210 http://* 'self' https://*.gstatic.com https://*.googleapis.com ws: 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src 'self' data: http://* https://*; font-src 'self'; img-src 'self' data: http://* https://*; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src http://localhost:3210 http://* 'self' https://api.esstudio.site https://feedly.com/v3/search/feeds https://feeds.feedburner.com https://www.google-analytics.com;">
+    <meta http-equiv="Content-Security-Policy" content="
+        upgrade-insecure-requests;
+        default-src  'self' https://*.gstatic.com https://*.googleapis.com; 
+        style-src 'self' 'unsafe-inline';
+        media-src 'self' data: http://* https://*; 
+        font-src 'self';
+        img-src 'self' data: http://* https://*;
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+        connect-src  'self' https://api.esstudio.site https://feedly.com/v3/search/feeds https://feeds.feedburner.com https://www.google-analytics.com;">
 
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
@@ -57,1464 +63,132 @@
     <ons-navigator swipeable="false" id="navigator" page="splitter.html"></ons-navigator>
 
     
-    <template id="about.html">
-        <ons-page id="about-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center" data-localized-message="about">About</div>
-    </ons-toolbar>
-    <div style="padding: 10px;" class="user-select-text">
-        <h1 data-localized-message="about">About</h1>
-        <img style="margin: 0 10px 10px 0; float: left; max-width: 50%;" src="static/logo.png">
-        <p data-localized-message="appDescription">
-            The easiest way to follow news from your favorite websites and blogs and news sites. Easily search for news
-            on multiple platforms,
-            find feeds on popular websites and more. Also works as a classic RSS/Atom reader.
-        </p>
-        <div class="clearfix"></div>
-        <div lang="en-US" xml:lang="en-US">
-            <ons-if platform="browser">
-                <p>
-                    This website will function as an app once you added it to your homescreen.
-                </p>
-                <ul>
-                    <li>Android: Menu icon ( ⋮ ) -> &quot;Add to homescreen&quot; button</li>
-                    <li>
-                        iPhone, iPad, & iPod Touch: Click the Share button on the browser’s toolbar (the rectangle with
-                        an
-                        arrow
-                        pointing upward).
-                        Then click the &quot;Add to Home Screen&quot; button.
-                    </li>
-                    <li>
-                        Edge: Menu icon ( ⋯ ) -> &quot;Pin this page to Start&quot; or &quot;Pin this page to
-                        taskbar&quot;
-                    </li>
-                    <li>
-                        Chrome: open this url: &quot;chrome://flags/#enable-desktop-pwas&quot;
-                        <br>
-                        <img src="static/chrome-enable-pwa.png">
-                        <br> Menu icon ( ⋮ ) -> &quot;Install to desktop&quot;
-                    </li>
-                </ul>
-                <p>
-                    Available on your browser and in the <a target="_system" href="https://play.google.com/store/apps/details?id=com.EchoSierraStudio.Newsfeeder">google
-                        play</a>
-                    store.
-                </p>
-            </ons-if>
-            <h4>Guide</h4>
-            <p>
-                When you first open the app, you will see the recommendations page. This page allows you to easily add
-                and
-                remove popular
-                feeds.
-            </p>
-            <p>
-                <img src="static/menu.png">
-            </p>
-            <p>
-                If you're not already on the &quot;Recommended&quot; page, open the menu (by clicking the 3 bars in the
-                upper left), and
-                click on &quot;Recommended&quot;.
-            </p>
-            <p>
-                <a href="javascript:alert('yaas')">Test</a>
-            </p>
-            <p>
-                <img src="static/recommended.png">
-            </p>
-            <p>
-                You will now see the interface above. Which is a list of recommended feeds.
-            </p>
-            <p>
-                <img src="static/recommended-2.png">
-            </p>
-            <p>
-                Let's add CNN.com.
-            </p>
-            <p>
-                <img src="static/news-feed-initial.png">
-            </p>
-            <p>
-                Next, navigate to the "News" or "My Feeds" page. No posts from CNN.com have shown up yet because the
-                page is
-                still loading
-                the CNN.com feed.
-            </p>
-            <p>
-                <img src="static/news-feed-loading.png">
-            </p>
-            <p>
-                Wait for the progress bar right under the toolbar to complete.
-            </p>
-            <p>
-                <img src="static/news-feed.png">
-            </p>
-            <p>
-                The progress bar has completed and the CNN.com posts have shown up.
-            </p>
-            <p>
-                <img src="static/news-search.png">
-            </p>
-            <p>
-                You can also use the search field to filter posts. It will search the name of the feed, for example
-                CNN.com,
-                to only show
-                posts from CNN.com. It will also search in the posts title, description and content.
-            </p>
-            <p>
-                <img src="static/search-feed.png">
-            </p>
-            <p>
-                Let's try to find a custom feed on a website. Note that not all websites have these, and their might be
-                a
-                good chance the
-                app will not be able to find one. If the app can't find a feed, you can always search google to find an
-                RSS
-                (or
-                Atom) feed. As the app will also recognize these. For example the app cannot find a google news feed
-                (&quot;news.google.com&quot;),
-                but after a simple google search you will find that &quot;news.google.com/rss&quot; does work.
-            </p>
-            <p>
-                <img src="static/add-feed-loading.png">
-            </p>
-            <p>
-                This could a few seconds depending on your network.
-            </p>
-            <p>
-                <img src="static/add-feed.png">
-            </p>
-            <p>
-                After the loading you will see the feed and it's posts. You can add it into your personal feed by
-                clicking
-                the &quot;plus&quot;
-                button.
-            </p>
-            <p>
-                <img src="static/news-feed-added-item.png">
-            </p>
-            <p>
-                You will now see all of the posts, from the feed you have just added, in your "My Feeds" or "News" page.
-            </p>
-            <p>
-                <img src="static/feeds.png">
-            </p>
-            <p>
-                You can view all of your subscribed feeds by navigating to the &quot;Feeds&quot; page. This will show
-                not
-                only the recommended
-                feeds but also custom feeds that you had manually added.
-            </p>
-        </div>
-    </div>
-    <ons-card>
-        <div class="title" data-localized-message="other">Other</div>
-        <div class="content">
-            <a data-localized-message="contactDeveloper" target="_system" href="https://esstudio.site/contact/">Contact the developer</a>
-            <br>
-            <a data-localized-message="moreApps" target="_system" href="https://esstudio.site">More Apps</a>
-            <br>
-            <a data-localized-message="sendEmail" href="mailto:polyismstudio@gmail.com?subject=Newsfeeder&amp;body=Your%20message." target="_top">Send an
-                Email</a>
-            <br>
-            <a data-localized-message="privacyPolicy" target="_system" href="https://echosierrastudio.github.io/EchoSierraStudio/privacy-policy.html">Privacy
-                Policy</a>
-            <br>
-            <div><span data-localized-message="iconsMadeBy">Icons made by</span> 
-                <a href="https://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
-                <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC
-                    3.0 BY</a>
-            </div>
-            <div><span data-localized-message="iconsMadeBy">Icons made by</span>
-                <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
-                <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC
-                    3.0 BY</a>
-            </div>
-        </div>
-    </ons-card>
-</ons-page>
+    <template id=about.html>
+        <ons-page id=about-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center data-localized-message=about>About</div> </ons-toolbar> <div style=padding:10px class=user-select-text> <h1 data-localized-message=about>About</h1> <img style="margin:0 10px 10px 0;float:left;max-width:50%" src=static/logo.png> <p data-localized-message=appDescription> The easiest way to follow news from your favorite websites and blogs and news sites. Easily search for news on multiple platforms, find feeds on popular websites and more. Also works as a classic RSS/Atom reader. </p> <div class=clearfix></div> <div lang=en-US xml:lang=en-US> <ons-if platform=browser> <p> This website will function as an app once you added it to your homescreen. </p> <ul> <li>Android: Menu icon ( ⋮ ) -> &quot;Add to homescreen&quot; button</li> <li> iPhone, iPad, & iPod Touch: Click the Share button on the browser’s toolbar (the rectangle with an arrow pointing upward). Then click the &quot;Add to Home Screen&quot; button. </li> <li> Edge: Menu icon ( ⋯ ) -> &quot;Pin this page to Start&quot; or &quot;Pin this page to taskbar&quot; </li> <li> Chrome: open this url: &quot;chrome://flags/#enable-desktop-pwas&quot; <br> <img src=static/chrome-enable-pwa.png> <br> Menu icon ( ⋮ ) -> &quot;Install to desktop&quot; </li> </ul> <p> Available on your browser and in the <a target=_system href="https://play.google.com/store/apps/details?id=com.EchoSierraStudio.Newsfeeder">google play</a> store. </p> </ons-if> <h4>Guide</h4> <p> When you first open the app, you will see the recommendations page. This page allows you to easily add and remove popular feeds. </p> <p> <img src=static/menu.png> </p> <p> If you're not already on the &quot;Recommended&quot; page, open the menu (by clicking the 3 bars in the upper left), and click on &quot;Recommended&quot;. </p> <p> <a href="javascript:alert('yaas')">Test</a> </p> <p> <img src=static/recommended.png> </p> <p> You will now see the interface above. Which is a list of recommended feeds. </p> <p> <img src=static/recommended-2.png> </p> <p> Let's add CNN.com. </p> <p> <img src=static/news-feed-initial.png> </p> <p> Next, navigate to the "News" or "My Feeds" page. No posts from CNN.com have shown up yet because the page is still loading the CNN.com feed. </p> <p> <img src=static/news-feed-loading.png> </p> <p> Wait for the progress bar right under the toolbar to complete. </p> <p> <img src=static/news-feed.png> </p> <p> The progress bar has completed and the CNN.com posts have shown up. </p> <p> <img src=static/news-search.png> </p> <p> You can also use the search field to filter posts. It will search the name of the feed, for example CNN.com, to only show posts from CNN.com. It will also search in the posts title, description and content. </p> <p> <img src=static/search-feed.png> </p> <p> Let's try to find a custom feed on a website. Note that not all websites have these, and their might be a good chance the app will not be able to find one. If the app can't find a feed, you can always search google to find an RSS (or Atom) feed. As the app will also recognize these. For example the app cannot find a google news feed (&quot;news.google.com&quot;), but after a simple google search you will find that &quot;news.google.com/rss&quot; does work. </p> <p> <img src=static/add-feed-loading.png> </p> <p> This could a few seconds depending on your network. </p> <p> <img src=static/add-feed.png> </p> <p> After the loading you will see the feed and it's posts. You can add it into your personal feed by clicking the &quot;plus&quot; button. </p> <p> <img src=static/news-feed-added-item.png> </p> <p> You will now see all of the posts, from the feed you have just added, in your "My Feeds" or "News" page. </p> <p> <img src=static/feeds.png> </p> <p> You can view all of your subscribed feeds by navigating to the &quot;Feeds&quot; page. This will show not only the recommended feeds but also custom feeds that you had manually added. </p> </div> </div> <ons-card> <div class=title data-localized-message=other>Other</div> <div class=content> <a data-localized-message=contactDeveloper target=_system href=https://esstudio.site/contact/ >Contact the developer</a> <br> <a data-localized-message=moreApps target=_system href=https://esstudio.site>More Apps</a> <br> <a data-localized-message=sendEmail href="mailto:polyismstudio@gmail.com?subject=Newsfeeder&amp;body=Your%20message." target=_top>Send an Email</a> <br> <a data-localized-message=privacyPolicy target=_system href=https://echosierrastudio.github.io/EchoSierraStudio/privacy-policy.html>Privacy Policy</a> <br> <div><span data-localized-message=iconsMadeBy>Icons made by</span> <a href=https://www.flaticon.com/authors/pixel-buddha title="Pixel Buddha">Pixel Buddha</a> from <a href=https://www.flaticon.com/ title=Flaticon>www.flaticon.com</a> is licensed by <a href=http://creativecommons.org/licenses/by/3.0/ title="Creative Commons BY 3.0" target=_blank>CC 3.0 BY</a> </div> <div><span data-localized-message=iconsMadeBy>Icons made by</span> <a href=https://www.flaticon.com/authors/vectors-market title="Vectors Market">Vectors Market</a> from <a href=https://www.flaticon.com/ title=Flaticon>www.flaticon.com</a> is licensed by <a href=http://creativecommons.org/licenses/by/3.0/ title="Creative Commons BY 3.0" target=_blank>CC 3.0 BY</a> </div> </div> </ons-card> </ons-page>
     </template>
     
-    <template id="add-category.html">
-        <ons-page id="add-category-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div id="add-category-page-title" class="center" data-localized-message="addCategory">Add Category</div>
-        <div class="right">
-            <ons-toolbar-button id="add-category-toolbar-button">
-                <ons-icon icon="md-check"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <div>
-        <ons-list>
-            <ons-list-item class="category-sub-category-add">
-                <div class="left">
-                    <ons-icon icon="md-collection-plus"></ons-icon>
-                </div>
-                <div class="center">
-                    <div>
-                        <h3 data-localized-message="nameOfCategory">Name of the Category</h3>
-                        <ons-input id="add-category-title" required placeholder="Name your category..." type="text" name="categoryname" minlength="3" maxlength="30" style="width: 350px; max-width: 100%"></ons-input>
-                    </div>
-                </div>
-                <div class="right"></div>
-            </ons-list-item>
-            <div id="add-category-page-items-to-add"></div>
-            <ons-list-item>
-                <ons-button id="add-category-button" data-localized-message="done">Done</ons-button>
-            </ons-list-item>
-        </ons-list>
-    </div>
-</ons-page>
+    <template id=add-category.html>
+        <ons-page id=add-category-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div id=add-category-page-title class=center data-localized-message=addCategory>Add Category</div> <div class=right> <ons-toolbar-button id=add-category-toolbar-button> <ons-icon icon=md-check></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <ons-list> <ons-list-item class=category-sub-category-add> <div class=left> <ons-icon icon=md-collection-plus></ons-icon> </div> <div class=center> <div> <h3 data-localized-message=nameOfCategory>Name of the Category</h3> <ons-input id=add-category-title required placeholder="Name your category..." type=text name=categoryname minlength=3 maxlength=30 style=width:350px;max-width:100%></ons-input> </div> </div> <div class=right></div> </ons-list-item> <div id=add-category-page-items-to-add></div> <ons-list-item> <ons-button id=add-category-button data-localized-message=done>Done</ons-button> </ons-list-item> </ons-list> </div> </ons-page>
     </template>
     
-    <template id="add-feed-tabbar.html">
-        <ons-page id="add-feed-tabbar">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center" data-localized-message="addFeed">Add Feed</div>
-    </ons-toolbar>
-
-    <ons-tabbar swipeable="" position="auto">
-        <ons-tab page="add-feed.html" label="Feed URL" icon="md-link" active="">
-        </ons-tab>
-        <ons-tab page="add-opml.html" label="OPML Feeds" icon="icon-opml">
-        </ons-tab>
-    </ons-tabbar>
-</ons-page>
+    <template id=add-feed-tabbar.html>
+        <ons-page id=add-feed-tabbar> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center data-localized-message=addFeed>Add Feed</div> </ons-toolbar> <ons-tabbar swipeable position=auto> <ons-tab page=add-feed.html label="Feed URL" icon=md-link active> </ons-tab> <ons-tab page=add-opml.html label="OPML Feeds" icon=icon-opml> </ons-tab> </ons-tabbar> </ons-page>
     </template>
     
-    <template id="add-feed.html">
-        <ons-page id="add-feed-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center" data-localized-message="addFeed">Add Feed</div>
-    </ons-toolbar>
-    <ons-progress-bar id="add-feed-page-progress" value="33"></ons-progress-bar>
-    <div>
-        <div id="add-feed-page-initial-content" style="display: none;">
-            <div style="padding: 10px;">
-                <h1 data-localized-message="searchFeed">
-                    Search feed
-                </h1>
-                <!-- <p>Please search for the icon
-                    <ons-icon icon="md-rss"></ons-icon> or an icon that looks like it, 
-                    on the website for which you would like to import it's blog/news articles. 
-                    Select the icon and copy the link, or open the link and copy
-                    the url from the adress bar. 
-                    You can also try a plain website url like &quot;reddit.com&quot;.
-                    After that try again by pasting the link below:
-                </p> -->
-                <form novalidate="" style="text-align: center;" id="add-feed-page-url-find-feed-form">
-                    <p>
-                        <ons-input type="text" id="add-feed-page-url-rss" modifier="underbar" data-localized-attr-message="{placeholder:'searchForFeeds'}" placeholder="Search for feeds" float=""></ons-input>
-                    </p>
-                    <p style="margin-top: 30px;">
-                        <button class="button" type="submit" id="add-feed-page-url-find-feed" data-localized-message="findFeed">Find feed</button>
-                    </p>
-                </form>
-            </div>
-        </div>
-        <div id="add-feed-page-notfound-content" style="display: none">
-            <div style="padding: 10px;">
-                <h1>
-                    Could not find feed on 
-                    &quot;<span id="add-feed-page-url-not-found-url"></span>&quot;
-                </h1>
-                <p>Please search for the icon
-                    <ons-icon icon="md-rss"></ons-icon> or an icon that looks like it. Select the icon and copy the link or open the link and copy
-                    the url from the adress bar. After that try again by pasting the link below:
-                </p>
-                <form novalidate="" style="text-align: center;" id="add-feed-page-url-not-found-find-feed-form">
-                    <p>
-                        <ons-input type="text" id="add-feed-page-url-not-found-rss" modifier="underbar" placeholder="Search for feeds" float=""></ons-input>
-                    </p>
-                    <p style="margin-top: 30px;">
-                        <button class="button" type="submit" id="add-feed-page-url-not-found-find-feed" data-localized-message="findFeed">Find feed</button>
-                    </p>
-                </form>
-            </div>
-        </div>
-        <div id="add-feed-page-content" style="display: none;">
-            <ons-list id="add-feed-page-items">
-                <ons-list-item>
-                    <div class="left">
-                        <img id="add-feed-page-icon" class="list-item__thumbnail">
-                    </div>
-                    <div class="center">
-                        <span id="add-feed-page-title" class="list-item__title"></span>
-                        <span id="add-feed-page-description" class="list-item__subtitle"></span>
-                    </div>
-                    <div class="right">
-                        <ons-fab modifier="mini" id="add-feed-page-subscribe-btn">
-                            <ons-icon icon="md-plus">
-                            </ons-icon>
-                        </ons-fab>
-                    </div>
-                </ons-list-item>
-                <ons-list-item>
-                    <div id="add-feed-page-site" class="center"></div>
-                </ons-list-item>
-                <ons-list-header>Feed</ons-list-header>
-            </ons-list>
-            <ons-fab style="position:fixed;" id="add-feed-page-subscribe-btn2" position="bottom right">
-                <ons-icon icon="md-plus">
-                </ons-icon>
-            </ons-fab>
-        </div>
-    </div>
-    <ons-progress-circular class="fixed-center" id="add-feed-page-progress-circular" indeterminate=""></ons-progress-circular>
-</ons-page>
+    <template id=add-feed.html>
+        <ons-page id=add-feed-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center data-localized-message=addFeed>Add Feed</div> </ons-toolbar> <ons-progress-bar id=add-feed-page-progress value=33></ons-progress-bar> <div> <div id=add-feed-page-initial-content style=display:none> <div style=padding:10px> <h1 data-localized-message=searchFeed> Search feed </h1> <form novalidate style=text-align:center id=add-feed-page-url-find-feed-form> <p> <ons-input type=text id=add-feed-page-url-rss modifier=underbar data-localized-attr-message="{placeholder:'searchForFeeds'}" placeholder="Search for feeds" float></ons-input> </p> <p style=margin-top:30px> <button class=button type=submit id=add-feed-page-url-find-feed data-localized-message=findFeed>Find feed</button> </p> </form> </div> </div> <div id=add-feed-page-notfound-content style=display:none> <div style=padding:10px> <h1> Could not find feed on &quot;<span id=add-feed-page-url-not-found-url></span>&quot; </h1> <p>Please search for the icon <ons-icon icon=md-rss></ons-icon> or an icon that looks like it. Select the icon and copy the link or open the link and copy the url from the adress bar. After that try again by pasting the link below: </p> <form novalidate style=text-align:center id=add-feed-page-url-not-found-find-feed-form> <p> <ons-input type=text id=add-feed-page-url-not-found-rss modifier=underbar placeholder="Search for feeds" float></ons-input> </p> <p style=margin-top:30px> <button class=button type=submit id=add-feed-page-url-not-found-find-feed data-localized-message=findFeed>Find feed</button> </p> </form> </div> </div> <div id=add-feed-page-content style=display:none> <ons-list id=add-feed-page-items> <ons-list-item> <div class=left> <img id=add-feed-page-icon class=list-item__thumbnail> </div> <div class=center> <span id=add-feed-page-title class=list-item__title></span> <span id=add-feed-page-description class=list-item__subtitle></span> </div> <div class=right> <ons-fab modifier=mini id=add-feed-page-subscribe-btn> <ons-icon icon=md-plus> </ons-icon> </ons-fab> </div> </ons-list-item> <ons-list-item> <div id=add-feed-page-site class=center></div> </ons-list-item> <ons-list-header>Feed</ons-list-header> </ons-list> <ons-fab style=position:fixed id=add-feed-page-subscribe-btn2 position="bottom right"> <ons-icon icon=md-plus> </ons-icon> </ons-fab> </div> </div> <ons-progress-circular class=fixed-center id=add-feed-page-progress-circular indeterminate></ons-progress-circular> </ons-page>
     </template>
     
-    <template id="add-opml-inspect.html">
-        <ons-page id="add-opml-inspect-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center" data-localized-message="addOPML">Add OPML</div>
-    </ons-toolbar>
-    <div>
-        <div style="padding: 10px;">
-            <h1>
-                OPML
-            </h1>
-            <p data-localized-message="opmlExplanation">
-                OPML is a file that contains a list of rss and atom sources.
-                You can import these files as a url or by opening an OPML file on your device.
-            </p>
-        </div>
-        <div>
-            <ons-list id="add-opml-inspect-list-items-root"></ons-list>
-        </div>
-    </div>
-    <ons-progress-circular class="fixed-center" id="add-opml-inspect-progress" indeterminate=""></ons-progress-circular>
-</ons-page>
+    <template id=add-opml-inspect.html>
+        <ons-page id=add-opml-inspect-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center data-localized-message=addOPML>Add OPML</div> </ons-toolbar> <div> <div style=padding:10px> <h1> OPML </h1> <p data-localized-message=opmlExplanation> OPML is a file that contains a list of rss and atom sources. You can import these files as a url or by opening an OPML file on your device. </p> </div> <div> <ons-list id=add-opml-inspect-list-items-root></ons-list> </div> </div> <ons-progress-circular class=fixed-center id=add-opml-inspect-progress indeterminate></ons-progress-circular> </ons-page>
     </template>
     
-    <template id="add-opml.html">
-        <ons-page id="add-opml-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center" data-localized-message="addOPML">Add OPML</div>
-    </ons-toolbar>
-    <div>
-        <ons-list>
-            <div style="padding: 10px;">
-                <h1>
-                    OPML
-                </h1>
-                <p data-localized-message="opmlExplanation">
-                    OPML is a file that contains a list of rss and atom sources.
-                    You can import these files as a url or by opening an OPML file on your device.
-                </p>
-            </div>
-            <ons-list-item>
-                <div class="left"><ons-icon icon="md-link"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2 data-localized-message="addAnOpmlFileFromAUrl">Add an OPML file from a URL</h2>
-                        <p data-localized-message="openAnOpmlFileFromTheSpecifiedUrl">Open an OPML file from the specified url.</p>
-                        <ons-input placeholder="Enter the URL" style="width: 100%" id="add-opml-open-url" type="url"></ons-input>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-button data-localized-message="openUrl" id="add-opml-open-url-btn">Open URL</ons-button>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left"><ons-icon icon="md-file"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2 data-localized-message="addOpmlFromFile">Add OPML from file</h2>
-                        <p data-localized-message="openAnOpmlFileFromYourDevice">Open an OPML file from your device.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <label>
-                        <ons-button data-localized-message="openFile">Open File</ons-button>
-                        <ons-input id="add-opml-open-file" style="display: none" type="file" accept=".opml,.xml"></ons-input>
-                    </label>
-                </div>
-            </ons-list-item>
-            <!-- <ons-list-item>
-                <div class="left"><ons-icon icon="md-file"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2>Export OPML File from Outlook</h2>
-                        <p>Learn how to export an OPML file with Outlook.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-button>Start</ons-button>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left"><ons-icon icon="md-file"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2>Export OPML File from Internet Explorer</h2>
-                        <p>Learn how to export an OPML file with Internet Explorer.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-button>Start</ons-button>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left"><ons-icon icon="md-file"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2>Export OPML File from Feedly</h2>
-                        <p>Learn how to export an OPML file with Feedly.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-button>Start</ons-button>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left"><ons-icon icon="md-file"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2>Export OPML File from Youtube</h2>
-                        <p>Learn how to export an OPML file with Youtube.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-button>Start</ons-button>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left"><ons-icon icon="md-file"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2>Export OPML File from Twitter</h2>
-                        <p>Learn how to export an OPML file with Twitter.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-button>Start</ons-button>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left"><ons-icon icon="md-file"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2>Export OPML File from Reddit</h2>
-                        <p>Learn how to export an OPML file with Reddit.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-button>Start</ons-button>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left"><ons-icon icon="md-file"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2>Export OPML File from Facebook</h2>
-                        <p>Learn how to export an OPML file with Facebook.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-button>Start</ons-button>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left"><ons-icon icon="md-file"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2>Export OPML File from Gmail</h2>
-                        <p>Learn how to export an OPML file with Gmail.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-button>Start</ons-button>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="left"><ons-icon icon="md-file"></ons-icon></div>
-                <div class="center">
-                    <div style="width: 100%">
-                        <h2>Export OPML File from Google News</h2>
-                        <p>Learn how to export an OPML file with Google News.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-button>Start</ons-button>
-                </div>
-            </ons-list-item> -->
-        </ons-list>
-    </div>
-</ons-page>
+    <template id=add-opml.html>
+        <ons-page id=add-opml-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center data-localized-message=addOPML>Add OPML</div> </ons-toolbar> <div> <ons-list> <div style=padding:10px> <h1> OPML </h1> <p data-localized-message=opmlExplanation> OPML is a file that contains a list of rss and atom sources. You can import these files as a url or by opening an OPML file on your device. </p> </div> <ons-list-item> <div class=left><ons-icon icon=md-link></ons-icon></div> <div class=center> <div style=width:100%> <h2 data-localized-message=addAnOpmlFileFromAUrl>Add an OPML file from a URL</h2> <p data-localized-message=openAnOpmlFileFromTheSpecifiedUrl>Open an OPML file from the specified url.</p> <ons-input placeholder="Enter the URL" style=width:100% id=add-opml-open-url type=url></ons-input> </div> </div> <div class=right> <ons-button data-localized-message=openUrl id=add-opml-open-url-btn>Open URL</ons-button> </div> </ons-list-item> <ons-list-item> <div class=left><ons-icon icon=md-file></ons-icon></div> <div class=center> <div style=width:100%> <h2 data-localized-message=addOpmlFromFile>Add OPML from file</h2> <p data-localized-message=openAnOpmlFileFromYourDevice>Open an OPML file from your device.</p> </div> </div> <div class=right> <label> <ons-button data-localized-message=openFile>Open File</ons-button> <ons-input id=add-opml-open-file style=display:none type=file accept=.opml,.xml></ons-input> </label> </div> </ons-list-item> </ons-list> </div> </ons-page>
     </template>
     
-    <template id="add-specific-feed.html">
-        <ons-page id="add-specific-feed-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center" id="add-specific-feed-page-toolbar-title" data-localized-message="addFeed">Add Feed</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <div>
-        <ons-list>
-            <ons-list-item>
-                <div class="left">
-                    <img id="add-specific-feed-page-icon" class="list-item__thumbnail">
-                </div>
-                <div class="center">
-                    <span id="add-specific-feed-page-title" class="list-item__title"></span>
-                    <span id="add-specific-feed-page-description" class="list-item__subtitle"></span>
-                </div>
-                <div class="right">
-                    <ons-fab modifier="mini" id="add-specific-feed-page-subscribe-btn">
-                        <ons-icon icon="md-plus">
-                        </ons-icon>
-                    </ons-fab>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div id="add-specific-feed-page-site" class="center"></div>
-            </ons-list-item>
-            <ons-list-item>
-                <ons-button id="add-specific-feed-page-subscribe-btn3">
-                    <ons-icon icon="md-plus"></ons-icon>
-                    Subscribe
-                </ons-button>
-            </ons-list-item>
-            <ons-list-header>Feed</ons-list-header>
-            <div>
-                <ons-lazy-repeat id="add-specific-feed-page-lazy-repeat">
-                    <ons-list-item style="position: relative">
-                        <div>
-                            <div style="padding: 20px;">
-                                <ons-progress-circular class="abs-center" id="add-specific-feed-page-progress-circular" indeterminate="">
-                                </ons-progress-circular>
-                            </div>
-                        </div>
-                    </ons-list-item>
-                </ons-lazy-repeat>
-            </div>
-        </ons-list>
-        <ons-fab style="position:fixed;" id="add-specific-feed-page-subscribe-btn2" position="bottom right">
-            <ons-icon icon="md-plus">
-            </ons-icon>
-        </ons-fab>
-    </div>
-</ons-page>
+    <template id=add-specific-feed.html>
+        <ons-page id=add-specific-feed-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center id=add-specific-feed-page-toolbar-title data-localized-message=addFeed>Add Feed</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <ons-list> <ons-list-item> <div class=left> <img id=add-specific-feed-page-icon class=list-item__thumbnail> </div> <div class=center> <span id=add-specific-feed-page-title class=list-item__title></span> <span id=add-specific-feed-page-description class=list-item__subtitle></span> </div> <div class=right> <ons-fab modifier=mini id=add-specific-feed-page-subscribe-btn> <ons-icon icon=md-plus> </ons-icon> </ons-fab> </div> </ons-list-item> <ons-list-item> <div id=add-specific-feed-page-site class=center></div> </ons-list-item> <ons-list-item> <ons-button id=add-specific-feed-page-subscribe-btn3> <ons-icon icon=md-plus></ons-icon> Subscribe </ons-button> </ons-list-item> <ons-list-header>Feed</ons-list-header> <div> <ons-lazy-repeat id=add-specific-feed-page-lazy-repeat> <ons-list-item style=position:relative> <div> <div style=padding:20px> <ons-progress-circular class=abs-center id=add-specific-feed-page-progress-circular indeterminate> </ons-progress-circular> </div> </div> </ons-list-item> </ons-lazy-repeat> </div> </ons-list> <ons-fab style=position:fixed id=add-specific-feed-page-subscribe-btn2 position="bottom right"> <ons-icon icon=md-plus> </ons-icon> </ons-fab> </div> </ons-page>
     </template>
     
-    <template id="background-audio-action-sheet.html">
-        <ons-action-sheet id="background-audio-action-sheet" cancelable="" data-localized-attr="{title:'backgroundAudio'}" title="Background Audio">
-    <div id="background-audio-action-sheet-audio-wrapper">
-        
-    </div>
-    <ons-action-sheet-button class="sheet-item-stop" icon="md-stop" data-localized-message="stop">Stop</ons-action-sheet-button>
-    <ons-action-sheet-button class="sheet-item-close" icon="md-close" data-localized-message="close">Close</ons-action-sheet-button>
-</ons-action-sheet>
+    <template id=background-audio-action-sheet.html>
+        <ons-action-sheet id=background-audio-action-sheet cancelable data-localized-attr="{title:'backgroundAudio'}" title="Background Audio"> <div id=background-audio-action-sheet-audio-wrapper> </div> <ons-action-sheet-button class=sheet-item-stop icon=md-stop data-localized-message=stop>Stop</ons-action-sheet-button> <ons-action-sheet-button class=sheet-item-close icon=md-close data-localized-message=close>Close</ons-action-sheet-button> </ons-action-sheet>
     </template>
     
-    <template id="bookmarks.html">
-        <ons-page id="bookmarks-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-toolbar-button data-splitter-open="">
-                <ons-icon icon="md-menu"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-        <div class="center" data-localized-message="bookmarks">Bookmarks</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <ons-list id="bookmarks-list">
-        <!-- <ons-lazy-repeat id="news-list"></ons-lazy-repeat> -->
-    </ons-list>
-</ons-page>
+    <template id=bookmarks.html>
+        <ons-page id=bookmarks-page> <ons-toolbar> <div class=left> <ons-toolbar-button data-splitter-open> <ons-icon icon=md-menu></ons-icon> </ons-toolbar-button> </div> <div class=center data-localized-message=bookmarks>Bookmarks</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help class="ons-icon ion-help ons-icon--ion"></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <ons-list id=bookmarks-list> </ons-list> </ons-page>
     </template>
     
-    <template id="category.html">
-        <ons-page data-id="category-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-toolbar-button data-splitter-open="">
-                <ons-icon icon="md-menu"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-        <div class="center category-page-title" data-localized-message="category">Category</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <div>
-        <ons-list>
-            <ons-list-header>Categories</ons-list-header>
-            <div class="category-sub-category-items"></div>
-            <ons-list-item class="category-sub-category-add">
-                <div class="left"><ons-icon icon="md-collection-plus"></ons-icon></div>
-                <div class="center">
-                    <div class="category-create-message">Create a new sub category</div>
-                </div>
-                <div class="right">
-                    <ons-fab modifier="mini"><ons-icon icon="md-plus"></ons-icon></ons-fab>
-                </div>
-            </ons-list-item>
-            <ons-list-item class="category-sub-category-edit">
-                <div class="left"><ons-icon icon="md-edit"></ons-icon></div>
-                <div class="center">
-                    <div>Edit</div>
-                </div>
-                <div class="right">
-                    <ons-fab modifier="mini"><ons-icon icon="md-edit"></ons-icon></ons-fab>
-                </div>
-            </ons-list-item>
-            <ons-list-header>Feeds</ons-list-header>
-            <div class="category-page-category-feeds"></div>
-        </ons-list>
-    </div>
-</ons-page>
+    <template id=category.html>
+        <ons-page data-id=category-page> <ons-toolbar> <div class=left> <ons-toolbar-button data-splitter-open> <ons-icon icon=md-menu></ons-icon> </ons-toolbar-button> </div> <div class="center category-page-title" data-localized-message=category>Category</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <ons-list> <ons-list-header>Categories</ons-list-header> <div class=category-sub-category-items></div> <ons-list-item class=category-sub-category-add> <div class=left><ons-icon icon=md-collection-plus></ons-icon></div> <div class=center> <div class=category-create-message>Create a new sub category</div> </div> <div class=right> <ons-fab modifier=mini><ons-icon icon=md-plus></ons-icon></ons-fab> </div> </ons-list-item> <ons-list-item class=category-sub-category-edit> <div class=left><ons-icon icon=md-edit></ons-icon></div> <div class=center> <div>Edit</div> </div> <div class=right> <ons-fab modifier=mini><ons-icon icon=md-edit></ons-icon></ons-fab> </div> </ons-list-item> <ons-list-header>Feeds</ons-list-header> <div class=category-page-category-feeds></div> </ons-list> </div> </ons-page>
     </template>
     
-    <template id="download-opml.html">
-        <ons-page id="download-opml-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center" data-localized-message="opmlExport">OPML Export</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <div style="padding: 10px;">
-        <h1>
-            OPML Export
-        </h1>
-        <p data-localized-message="opmlExplanation">
-            OPML is a file that contains a list of rss and atom sources.
-            You can download a list of those rss and atom sources by clicking the button below.
-        </p>
-        <a id="download-opml-link" download="newsfeeder-subscriptions.opml">
-            <ons-button data-localized-message="downloadYourNewsfeedOpml">Download Your Newsfeed OPML</ons-button>
-        </a>
-    </div>
-</ons-page>
+    <template id=download-opml.html>
+        <ons-page id=download-opml-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center data-localized-message=opmlExport>OPML Export</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help class="ons-icon ion-help ons-icon--ion"></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div style=padding:10px> <h1> OPML Export </h1> <p data-localized-message=opmlExplanation> OPML is a file that contains a list of rss and atom sources. You can download a list of those rss and atom sources by clicking the button below. </p> <a id=download-opml-link download=newsfeeder-subscriptions.opml> <ons-button data-localized-message=downloadYourNewsfeedOpml>Download Your Newsfeed OPML</ons-button> </a> </div> </ons-page>
     </template>
     
-    <template id="edit-category.html">
-        <ons-page id="edit-category-page">
-        <ons-toolbar>
-            <div class="left">
-                <ons-back-button></ons-back-button>
-            </div>
-            <div id="edit-category-page-title" class="center" data-localized-message="editCategory">Edit Category</div>
-            <div class="right">
-                <ons-toolbar-button id="edit-category-toolbar-button">
-                    <ons-icon icon="md-check"></ons-icon>
-                </ons-toolbar-button>
-                <ons-toolbar-button id="edit-category-toolbar-button-remove">
-                    <ons-icon icon="md-delete"></ons-icon>
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
-        <div>
-            <ons-list>
-                <ons-list-item class="category-sub-category-add">
-                    <div class="left">
-                        <ons-icon icon="md-collection-plus"></ons-icon>
-                    </div>
-                    <div class="center">
-                        <div>
-                            <h3>Name of the Category</h3>
-                            <ons-input id="edit-category-title" required placeholder="Name your category..." type="text" name="categoryname" minlength="3" maxlength="30" style="width: 350px; max-width: 100%"></ons-input>
-                        </div>
-                    </div>
-                    <div class="right"></div>
-                </ons-list-item>
-                <div id="edit-category-page-items-to-add"></div>
-                <ons-list-item>
-                    <ons-button id="edit-category-button">Done</ons-button>
-                </ons-list-item>
-            </ons-list>
-        </div>
-    </ons-page>
+    <template id=edit-category.html>
+        <ons-page id=edit-category-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div id=edit-category-page-title class=center data-localized-message=editCategory>Edit Category</div> <div class=right> <ons-toolbar-button id=edit-category-toolbar-button> <ons-icon icon=md-check></ons-icon> </ons-toolbar-button> <ons-toolbar-button id=edit-category-toolbar-button-remove> <ons-icon icon=md-delete></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <ons-list> <ons-list-item class=category-sub-category-add> <div class=left> <ons-icon icon=md-collection-plus></ons-icon> </div> <div class=center> <div> <h3>Name of the Category</h3> <ons-input id=edit-category-title required placeholder="Name your category..." type=text name=categoryname minlength=3 maxlength=30 style=width:350px;max-width:100%></ons-input> </div> </div> <div class=right></div> </ons-list-item> <div id=edit-category-page-items-to-add></div> <ons-list-item> <ons-button id=edit-category-button>Done</ons-button> </ons-list-item> </ons-list> </div> </ons-page>
     </template>
     
-    <template id="favorites.html">
-        <ons-page id="favorites-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-toolbar-button data-splitter-open="">
-                <ons-icon icon="md-menu"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-        <div class="center" data-localized-message="favorites">Favorites</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <ons-list id="favorites-list">
-        <!-- <ons-lazy-repeat id="news-list"></ons-lazy-repeat> -->
-    </ons-list>
-</ons-page>
+    <template id=favorites.html>
+        <ons-page id=favorites-page> <ons-toolbar> <div class=left> <ons-toolbar-button data-splitter-open> <ons-icon icon=md-menu></ons-icon> </ons-toolbar-button> </div> <div class=center data-localized-message=favorites>Favorites</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help class="ons-icon ion-help ons-icon--ion"></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <ons-list id=favorites-list> </ons-list> </ons-page>
     </template>
     
-    <template id="feeds-search-results.html">
-        <ons-page id="feeds-search-results-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center" id="feeds-search-results-page-toolbar-title" data-localized-message="feedSearchResults">Feed Search Results</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <div>
-        <ons-list>
-            <div id="search-result-feeds-list"></div>
-        </ons-list>
-    </div>
-    <ons-progress-circular class="fixed-center" id="feed-search-results-page-progress-circular" indeterminate="">
-    </ons-progress-circular>
-</ons-page>
+    <template id=feeds-search-results.html>
+        <ons-page id=feeds-search-results-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center id=feeds-search-results-page-toolbar-title data-localized-message=feedSearchResults>Feed Search Results</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <ons-list> <div id=search-result-feeds-list></div> </ons-list> </div> <ons-progress-circular class=fixed-center id=feed-search-results-page-progress-circular indeterminate> </ons-progress-circular> </ons-page>
     </template>
     
-    <template id="feeds.html">
-        <ons-page id="feeds-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-toolbar-button data-splitter-open="">
-                <ons-icon icon="md-menu"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-        <div class="center" data-localized-message="feeds">Feeds</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <div>
-        <ons-search-input placeholder="Search for feeds" id="search-feeds-items"></ons-search-input>
-        <ons-list>
-            <ons-list-header>OPML</ons-list-header>
-            <div id="feeds-page-acitions">
-                <ons-list-item tappable="" data-push-page="add-opml.html">
-                    <div class="left"><ons-icon style="font-size: 26px; margin-bottom: -4px" icon="icon-opml"></ons-icon></div>
-                    <div class="center">Import OPML</div>
-                </ons-list-item>
-                <ons-list-item tappable="" data-push-page="download-opml.html">
-                    <div class="left"><ons-icon style="font-size: 26px" icon="md-download"></ons-icon></div>
-                    <div class="center">Export OPML</div>
-                </ons-list-item>
-            </div>
-            <ons-list-header>Feeds</ons-list-header>
-            <div id="feeds-list"></div>
-            <ons-list-header>Recommended</ons-list-header>
-            <div id="recommended-feeds-items"></div>
-            <ons-list-header>Sources</ons-list-header>
-            <div id="recommended-sites-items"></div>
-        </ons-list>
-    </div>
-    <ons-fab id="add-feed-btn-feeds-page" position="bottom right">
-        <ons-icon icon="md-plus">
-        </ons-icon>
-    </ons-fab>
-</ons-page>
+    <template id=feeds.html>
+        <ons-page id=feeds-page> <ons-toolbar> <div class=left> <ons-toolbar-button data-splitter-open> <ons-icon icon=md-menu></ons-icon> </ons-toolbar-button> </div> <div class=center data-localized-message=feeds>Feeds</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <ons-search-input placeholder="Search for feeds" id=search-feeds-items></ons-search-input> <ons-list> <ons-list-header>OPML</ons-list-header> <div id=feeds-page-acitions> <ons-list-item tappable data-push-page=add-opml.html> <div class=left><ons-icon style=font-size:26px;margin-bottom:-4px icon=icon-opml></ons-icon></div> <div class=center>Import OPML</div> </ons-list-item> <ons-list-item tappable data-push-page=download-opml.html> <div class=left><ons-icon style=font-size:26px icon=md-download></ons-icon></div> <div class=center>Export OPML</div> </ons-list-item> </div> <ons-list-header>Feeds</ons-list-header> <div id=feeds-list></div> <ons-list-header>Recommended</ons-list-header> <div id=recommended-feeds-items></div> <ons-list-header>Sources</ons-list-header> <div id=recommended-sites-items></div> </ons-list> </div> <ons-fab id=add-feed-btn-feeds-page position="bottom right"> <ons-icon icon=md-plus> </ons-icon> </ons-fab> </ons-page>
     </template>
     
-    <template id="news.html">
-        <ons-page id="news-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-toolbar-button data-splitter-open="">
-                <ons-icon icon="md-menu"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-        <div class="center" data-localized-message="myFeed">My Feed</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <ons-search-input id="search-feeds-news-list-items" placeholder="Search for news"></ons-search-input>
-    <ons-progress-bar value="0" id="news-page-progress"></ons-progress-bar>
-    <ons-list id="news-list-lazy-repeat">
-        <ons-lazy-repeat id="news-list"></ons-lazy-repeat>
-    </ons-list>
-    <ons-fab id="add-feed-btn" position="bottom right">
-        <ons-icon icon="md-plus">
-        </ons-icon>
-    </ons-fab>
-    <ons-fab style="background-color: #f5593d; color: #fff" id="news-page-scroll-to-top" class="hidden" position="bottom center">
-        <ons-icon icon="md-chevron-up">
-        </ons-icon>
-    </ons-fab>
-</ons-page>
+    <template id=news.html>
+        <ons-page id=news-page> <ons-toolbar> <div class=left> <ons-toolbar-button data-splitter-open> <ons-icon icon=md-menu></ons-icon> </ons-toolbar-button> </div> <div class=center data-localized-message=myFeed>My Feed</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help class="ons-icon ion-help ons-icon--ion"></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <ons-search-input id=search-feeds-news-list-items placeholder="Search for news"></ons-search-input> <ons-progress-bar value=0 id=news-page-progress></ons-progress-bar> <ons-list id=news-list-lazy-repeat> <ons-lazy-repeat id=news-list></ons-lazy-repeat> </ons-list> <ons-fab id=add-feed-btn position="bottom right"> <ons-icon icon=md-plus> </ons-icon> </ons-fab> <ons-fab style=background-color:#f5593d;color:#fff id=news-page-scroll-to-top class=hidden position="bottom center"> <ons-icon icon=md-chevron-up> </ons-icon> </ons-fab> </ons-page>
     </template>
     
-    <template id="opml-instructions-facebook.html">
-        <ons-page id="about-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center">Export OPML with Outlook</div>
-    </ons-toolbar>
-    <div style="padding: 10px">
-    
-    </div>
-</ons-page>
+    <template id=opml-instructions-facebook.html>
+        <ons-page id=about-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center>Export OPML with Outlook</div> </ons-toolbar> <div style=padding:10px> </div> </ons-page>
     </template>
     
-    <template id="opml-instructions-feedly.html">
-        <ons-page id="about-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center">Export OPML with Outlook</div>
-    </ons-toolbar>
-    <div style="padding: 10px">
-    
-    </div>
-</ons-page>
+    <template id=opml-instructions-feedly.html>
+        <ons-page id=about-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center>Export OPML with Outlook</div> </ons-toolbar> <div style=padding:10px> </div> </ons-page>
     </template>
     
-    <template id="opml-instructions-gmail.html">
-        <ons-page id="about-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center">Export OPML with Outlook</div>
-    </ons-toolbar>
-    <div style="padding: 10px">
-    
-    </div>
-</ons-page>
+    <template id=opml-instructions-gmail.html>
+        <ons-page id=about-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center>Export OPML with Outlook</div> </ons-toolbar> <div style=padding:10px> </div> </ons-page>
     </template>
     
-    <template id="opml-instructions-internet-explorer.html">
-        <ons-page id="about-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center">Export OPML with Outlook</div>
-    </ons-toolbar>
-    <div style="padding: 10px">
-    
-    </div>
-</ons-page>
+    <template id=opml-instructions-internet-explorer.html>
+        <ons-page id=about-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center>Export OPML with Outlook</div> </ons-toolbar> <div style=padding:10px> </div> </ons-page>
     </template>
     
-    <template id="opml-instructions-outlook.html">
-        <ons-page id="about-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center">Export OPML with Outlook</div>
-    </ons-toolbar>
-    <div style="padding: 10px">
-    
-    </div>
-</ons-page>
+    <template id=opml-instructions-outlook.html>
+        <ons-page id=about-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center>Export OPML with Outlook</div> </ons-toolbar> <div style=padding:10px> </div> </ons-page>
     </template>
     
-    <template id="opml-instructions-twitter.html">
-        <ons-page id="about-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center">Export OPML with Outlook</div>
-    </ons-toolbar>
-    <div style="padding: 10px">
-    
-    </div>
-</ons-page>
+    <template id=opml-instructions-twitter.html>
+        <ons-page id=about-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center>Export OPML with Outlook</div> </ons-toolbar> <div style=padding:10px> </div> </ons-page>
     </template>
     
-    <template id="opml-instructions-youtube.html">
-        <ons-page id="about-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center">Export OPML with Outlook</div>
-    </ons-toolbar>
-    <div style="padding: 10px">
-    
-    </div>
-</ons-page>
+    <template id=opml-instructions-youtube.html>
+        <ons-page id=about-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center>Export OPML with Outlook</div> </ons-toolbar> <div style=padding:10px> </div> </ons-page>
     </template>
     
-    <template id="recommended.html">
-        <ons-page id="recommended-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-toolbar-button data-splitter-open="">
-                <ons-icon icon="md-menu"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-        <div class="center" data-localized-message="recommended">Recommended</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-
-    <div>
-        <div>
-            <ons-card>
-                <div class="content" data-localized-message="recommendedInstructions">
-                    <b>Popular news/blog feeds can be easily added or removed. If you want to view all your feeds, go to the &quot;Feeds&quot; page.</b><br>
-                    Confused? Have a look at the &quot;About&quot; page and view the instructions on how to use this app.
-                </div>
-            </ons-card>
-        </div>
-        <ons-list>
-            <ons-list-header data-localized-message="recommended">Recommended</ons-list-header>
-            <div id="recommended-feeds-items">
-
-            </div>
-            <ons-list-header data-localized-message="sources">Sources</ons-list-header>
-            <div id="recommended-sites-items">
-
-            </div>
-        </ons-list>
-    </div>
-</ons-page>
+    <template id=pwa-install-prompt-popover.html>
+        <ons-popover data-id=pwa-install-prompt-popover cancelable direction=down animation=fade-md> <div style=padding:10px;text-align:center> <p data-localized-message=clickTheIconToInstallNewsfeederOnYourHomescreen> Click the <ons-icon data-localized-message-arg=1 style=font-size:2em icon=ion-ios-download-outline> </ons-icon> icon to install Newsfeeder on your homescreen. </p> <p> <ons-button> <span data-localized-message=close>Close</span> </ons-button> </p> </div> </ons-popover>
     </template>
     
-    <template id="settings.html">
-        <ons-page data-id="settings-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-toolbar-button data-splitter-open="">
-                <ons-icon icon="md-menu"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-        <div class="center" data-localized-message="settings">Settings</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-
-    <div>
-        <ons-list>
-            <ons-list-item>
-                <div class="left">
-                    <icon icon="md-language"></icon>
-                </div>
-                <div class="center">
-                    <div>
-                        <span data-localized-message="changeLanguage">Change language</span><br>
-                        <small><strong><span data-localized-message="warning">Warning</span>: </strong>
-                            <span data-localized-message="translationDisclaimer">
-                                The translations
-                                where generated by a computer. We're working hard to perfectly translate the app to most
-                                languages.
-                            </span>
-                        </small>
-                    </div>
-                </div>
-                <div class="right">
-                    <ons-select class="settings-language-select"></ons-select>
-                </div>
-            </ons-list-item>
-        </ons-list>
-    </div>
-</ons-page>
+    <template id=recommended.html>
+        <ons-page id=recommended-page> <ons-toolbar> <div class=left> <ons-toolbar-button data-splitter-open> <ons-icon icon=md-menu></ons-icon> </ons-toolbar-button> </div> <div class=center data-localized-message=recommended>Recommended</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help class="ons-icon ion-help ons-icon--ion"></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <div> <ons-card> <div class=content data-localized-message=recommendedInstructions> <b>Popular news/blog feeds can be easily added or removed. If you want to view all your feeds, go to the &quot;Feeds&quot; page.</b><br> Confused? Have a look at the &quot;About&quot; page and view the instructions on how to use this app. </div> </ons-card> </div> <ons-list> <ons-list-header data-localized-message=recommended>Recommended</ons-list-header> <div id=recommended-feeds-items> </div> <ons-list-header data-localized-message=sources>Sources</ons-list-header> <div id=recommended-sites-items> </div> </ons-list> </div> </ons-page>
     </template>
     
-    <template id="sharing-buttons.html">
-        <div style="text-align: center">
-    <span class="user-select-text" style="background: #ccc;">{url}</span>
-    <!-- Sharingbutton Facebook -->
-    <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u={url}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton Twitter -->
-    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text={text}&amp;url={url}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton Google+ -->
-    <a class="resp-sharing-button__link" href="https://plus.google.com/share?url={url}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--google resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M11.37 12.93c-.73-.52-1.4-1.27-1.4-1.5 0-.43.03-.63.98-1.37 1.23-.97 1.9-2.23 1.9-3.57 0-1.22-.36-2.3-1-3.05h.5c.1 0 .2-.04.28-.1l1.36-.98c.16-.12.23-.34.17-.54-.07-.2-.25-.33-.46-.33H7.6c-.66 0-1.34.12-2 .35-2.23.76-3.78 2.66-3.78 4.6 0 2.76 2.13 4.85 5 4.9-.07.23-.1.45-.1.66 0 .43.1.83.33 1.22h-.08c-2.72 0-5.17 1.34-6.1 3.32-.25.52-.37 1.04-.37 1.56 0 .5.13.98.38 1.44.6 1.04 1.84 1.86 3.55 2.28.87.23 1.82.34 2.8.34.88 0 1.7-.1 2.5-.34 2.4-.7 3.97-2.48 3.97-4.54 0-1.97-.63-3.15-2.33-4.35zm-7.7 4.5c0-1.42 1.8-2.68 3.9-2.68h.05c.45 0 .9.07 1.3.2l.42.28c.96.66 1.6 1.1 1.77 1.8.05.16.07.33.07.5 0 1.8-1.33 2.7-3.96 2.7-1.98 0-3.54-1.23-3.54-2.8zM5.54 3.9c.33-.38.75-.58 1.23-.58h.05c1.35.05 2.64 1.55 2.88 3.35.14 1.02-.08 1.97-.6 2.55-.32.37-.74.56-1.23.56h-.03c-1.32-.04-2.63-1.6-2.87-3.4-.13-1 .08-1.92.58-2.5zM23.5 9.5h-3v-3h-2v3h-3v2h3v3h2v-3h3"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton Tumblr -->
-    <a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title={text}&amp;caption={text}&amp;content={url}&amp;canonicalUrl={url}&amp;shareSource=tumblr_share_button" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M13.5.5v5h5v4h-5V15c0 5 3.5 4.4 6 2.8v4.4c-6.7 3.2-12 0-12-4.2V9.5h-3V6.7c1-.3 2.2-.7 3-1.3.5-.5 1-1.2 1.4-2 .3-.7.6-1.7.7-3h3.8z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton E-Mail -->
-    <a class="resp-sharing-button__link" href="mailto:?subject={title}&amp;body={text}%20{url}" target="_self" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton Pinterest -->
-    <a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url={url}&amp;media={url}&amp;description={text}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M12.14.5C5.86.5 2.7 5 2.7 8.75c0 2.27.86 4.3 2.7 5.05.3.12.57 0 .66-.33l.27-1.06c.1-.32.06-.44-.2-.73-.52-.62-.86-1.44-.86-2.6 0-3.33 2.5-6.32 6.5-6.32 3.55 0 5.5 2.17 5.5 5.07 0 3.8-1.7 7.02-4.2 7.02-1.37 0-2.4-1.14-2.07-2.54.4-1.68 1.16-3.48 1.16-4.7 0-1.07-.58-1.98-1.78-1.98-1.4 0-2.55 1.47-2.55 3.42 0 1.25.43 2.1.43 2.1l-1.7 7.2c-.5 2.13-.08 4.75-.04 5 .02.17.22.2.3.1.14-.18 1.82-2.26 2.4-4.33.16-.58.93-3.63.93-3.63.45.88 1.8 1.65 3.22 1.65 4.25 0 7.13-3.87 7.13-9.05C20.5 4.15 17.18.5 12.14.5z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton LinkedIn -->
-    <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={url}&amp;title={text}&amp;summary={text}&amp;source={url}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton Reddit -->
-    <a class="resp-sharing-button__link" href="https://reddit.com/submit/?url={url}&amp;resubmit=true&amp;title={text}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65 0 3-1.35 3-3s-1.35-3-3-3c-1.38 0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65 0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66 0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64 0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4 0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6 0 .23-.13.53-.05.67.2.14.23.06.54-.18.67zm.2-2.8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.97-.82 1.6-.82 1.1 0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton XING -->
-    <a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url={url};title={text}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M10.2 9.7l-3-5.4C7.2 4 7 4 6.8 4h-5c-.3 0-.4 0-.5.2v.5L4 10 .4 16v.5c0 .2.2.3.4.3h5c.3 0 .4 0 .5-.2l4-6.6v-.5zM24 .2l-.5-.2H18s-.2 0-.3.3l-8 14v.4l5.2 9c0 .2 0 .3.3.3h5.4s.3 0 .4-.2c.2-.2.2-.4 0-.5l-5-8.8L24 .7V.2z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton WhatsApp -->
-    <a class="resp-sharing-button__link" href="whatsapp://send?text={text}%20{url}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton Hacker News -->
-    <a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u={url}&amp;t={text}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 140 140">
-                    <path fill-rule="evenodd" d="M60.94 82.314L17 0h20.08l25.85 52.093c.397.927.86 1.888 1.39 2.883.53.994.995 2.02 1.393 3.08.265.4.463.764.596 1.095.13.334.262.63.395.898.662 1.325 1.26 2.618 1.79 3.877.53 1.26.993 2.42 1.39 3.48 1.06-2.254 2.22-4.673 3.48-7.258 1.26-2.585 2.552-5.27 3.877-8.052L103.49 0h18.69L77.84 83.308v53.087h-16.9v-54.08z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton VK -->
-    <a class="resp-sharing-button__link" href="http://vk.com/share.php?title={text}&amp;url={url}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--vk resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M21.547 7h-3.29a.743.743 0 0 0-.655.392s-1.312 2.416-1.734 3.23C14.734 12.813 14 12.126 14 11.11V7.603A1.104 1.104 0 0 0 12.896 6.5h-2.474a1.982 1.982 0 0 0-1.75.813s1.255-.204 1.255 1.49c0 .42.022 1.626.04 2.64a.73.73 0 0 1-1.272.503 21.54 21.54 0 0 1-2.498-4.543.693.693 0 0 0-.63-.403h-2.99a.508.508 0 0 0-.48.685C3.005 10.175 6.918 18 11.38 18h1.878a.742.742 0 0 0 .742-.742v-1.135a.73.73 0 0 1 1.23-.53l2.247 2.112a1.09 1.09 0 0 0 .746.295h2.953c1.424 0 1.424-.988.647-1.753-.546-.538-2.518-2.617-2.518-2.617a1.02 1.02 0 0 1-.078-1.323c.637-.84 1.68-2.212 2.122-2.8.603-.804 1.697-2.507.197-2.507z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-    <!-- Sharingbutton Telegram -->
-    <a class="resp-sharing-button__link" href="https://telegram.me/share/url?text={text}&amp;url={url}" target="_blank" rel="noopener" aria-label="">
-        <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small">
-            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                    <path d="M.707 8.475C.275 8.64 0 9.508 0 9.508s.284.867.718 1.03l5.09 1.897 1.986 6.38a1.102 1.102 0 0 0 1.75.527l2.96-2.41a.405.405 0 0 1 .494-.013l5.34 3.87a1.1 1.1 0 0 0 1.046.135 1.1 1.1 0 0 0 .682-.803l3.91-18.795A1.102 1.102 0 0 0 22.5.075L.706 8.475z"/>
-                </svg>
-            </div>
-        </div>
-    </a>
-
-</div>
+    <template id=settings.html>
+        <ons-page data-id=settings-page> <ons-toolbar> <div class=left> <ons-toolbar-button data-splitter-open> <ons-icon icon=md-menu></ons-icon> </ons-toolbar-button> </div> <div class=center data-localized-message=settings>Settings</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help class="ons-icon ion-help ons-icon--ion"></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <ons-list> <ons-list-item> <div class=left> <ons-icon icon=md-globe-alt></ons-icon> </div> <div class=center> <div> <span data-localized-message=changeLanguage>Change language</span><br> <small><strong><span data-localized-message=warning>Warning</span>: </strong> <span data-localized-message=translationDisclaimer> The translations where generated by a computer. We're working hard to perfectly translate the app to most languages. </span> </small> </div> </div> <div class=right> <ons-select class=settings-language-select></ons-select> </div> </ons-list-item> <ons-list-item> <div class=left> <ons-icon icon=md-wifi-lock></ons-icon> </div> <div class=center> <div> <span data-localized-message=networkSavingMode>Network saving mode</span><br> </div> </div> <div class=right> <ons-select class=data-saving-mode-select> <option value=5 data-localized-message=normalGetNewArticlesEvery5Minutes>Normal (Get new articles every 5 minutes)</option> <option value=15 data-localized-message=lightGetNewArticlesEvery15Minutes>Light (Get new articles every 15 minutes)</option> <option value=60 data-localized-message=highGetNewArticlesEvery1Hour>High (Get new articles every 1 hour)</option> <option value=240 data-localized-message=extremeGetNewArticlesEvery4Hours>Extreme (Get new articles every 4 hours)</option> </ons-select> </div> </ons-list-item> <ons-list-item> <div class=left> <ons-icon icon=md-labels></ons-icon> </div> <div class=center> <div> <span data-localized-message=disableMaterialDesign>Disable material design</span> </div> </div> <div class=right> <ons-switch class=disable-material-design></ons-switch> </div> </ons-list-item> <ons-list-item> <div class=left> <ons-icon icon=md-help></ons-icon> </div> <div class=center> <div> Looking for something that isn't here? <br> <strong>Send us an email with your feature request!</strong> </div> </div> <div class=right> <div class=user-select-text><a target=_system href=mailto:newsfeeder@esstudio.site>newsfeeder@esstudio.site</a></div> </div> </ons-list-item> </ons-list> </div> </ons-page>
     </template>
     
-    <template id="specific-feed.html">
-        <ons-page id="specific-feed-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center" id="specific-feed-page-toolbar-feed-title">Feed</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help"></ons-icon>
-            </ons-toolbar-button>
-            <ons-toolbar-button id="specific-feed-page-toolbar-favorite">
-                <ons-icon icon="md-star-outline"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <div>
-        <div id="specific-feed-page-content">
-            <ons-list>
-                <ons-list-item>
-                    <div class="left">
-                        <img id="specific-feed-page-icon" class="list-item__thumbnail">
-                    </div>
-                    <div class="center">
-                        <span id="specific-feed-page-title" class="list-item__title"></span>
-                        <span class="list-item__subtitle" style="opacity: 1">
-                            <span id="specific-feed-page-description" class="user-select-text"></span>
-                            <br>
-                            <ons-button id="specific-feed-page-unsubscribe" data-localized-message="unsubscribe">Unsubscribe</ons-button>
-                            &nbsp;
-                            <ons-fab id="specific-feed-page-link-fab" modifier="mini">
-                                <ons-icon icon="md-link"></ons-icon>
-                            </ons-fab>
-                        </span>
-                    </div>
-                </ons-list-item>
-                <ons-list-header data-localized-message="news">News</ons-list-header>
-                <ons-lazy-repeat id="specific-feed-page-lazy-items"></ons-lazy-repeat>
-            </ons-list>
-        </div>
-    </div>
-</ons-page>
+    <template id=sharing-buttons.html>
+        <div style=text-align:center> <span class=user-select-text style=background:#ccc>{url}</span> <a class=resp-sharing-button__link href="https://facebook.com/sharer/sharer.php?u={url}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="https://twitter.com/intent/tweet/?text={text}&amp;url={url}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="https://plus.google.com/share?url={url}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--google resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M11.37 12.93c-.73-.52-1.4-1.27-1.4-1.5 0-.43.03-.63.98-1.37 1.23-.97 1.9-2.23 1.9-3.57 0-1.22-.36-2.3-1-3.05h.5c.1 0 .2-.04.28-.1l1.36-.98c.16-.12.23-.34.17-.54-.07-.2-.25-.33-.46-.33H7.6c-.66 0-1.34.12-2 .35-2.23.76-3.78 2.66-3.78 4.6 0 2.76 2.13 4.85 5 4.9-.07.23-.1.45-.1.66 0 .43.1.83.33 1.22h-.08c-2.72 0-5.17 1.34-6.1 3.32-.25.52-.37 1.04-.37 1.56 0 .5.13.98.38 1.44.6 1.04 1.84 1.86 3.55 2.28.87.23 1.82.34 2.8.34.88 0 1.7-.1 2.5-.34 2.4-.7 3.97-2.48 3.97-4.54 0-1.97-.63-3.15-2.33-4.35zm-7.7 4.5c0-1.42 1.8-2.68 3.9-2.68h.05c.45 0 .9.07 1.3.2l.42.28c.96.66 1.6 1.1 1.77 1.8.05.16.07.33.07.5 0 1.8-1.33 2.7-3.96 2.7-1.98 0-3.54-1.23-3.54-2.8zM5.54 3.9c.33-.38.75-.58 1.23-.58h.05c1.35.05 2.64 1.55 2.88 3.35.14 1.02-.08 1.97-.6 2.55-.32.37-.74.56-1.23.56h-.03c-1.32-.04-2.63-1.6-2.87-3.4-.13-1 .08-1.92.58-2.5zM23.5 9.5h-3v-3h-2v3h-3v2h3v3h2v-3h3"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title={text}&amp;caption={text}&amp;content={url}&amp;canonicalUrl={url}&amp;shareSource=tumblr_share_button" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M13.5.5v5h5v4h-5V15c0 5 3.5 4.4 6 2.8v4.4c-6.7 3.2-12 0-12-4.2V9.5h-3V6.7c1-.3 2.2-.7 3-1.3.5-.5 1-1.2 1.4-2 .3-.7.6-1.7.7-3h3.8z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="mailto:?subject={title}&amp;body={text}%20{url}" target=_self rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="https://pinterest.com/pin/create/button/?url={url}&amp;media={url}&amp;description={text}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M12.14.5C5.86.5 2.7 5 2.7 8.75c0 2.27.86 4.3 2.7 5.05.3.12.57 0 .66-.33l.27-1.06c.1-.32.06-.44-.2-.73-.52-.62-.86-1.44-.86-2.6 0-3.33 2.5-6.32 6.5-6.32 3.55 0 5.5 2.17 5.5 5.07 0 3.8-1.7 7.02-4.2 7.02-1.37 0-2.4-1.14-2.07-2.54.4-1.68 1.16-3.48 1.16-4.7 0-1.07-.58-1.98-1.78-1.98-1.4 0-2.55 1.47-2.55 3.42 0 1.25.43 2.1.43 2.1l-1.7 7.2c-.5 2.13-.08 4.75-.04 5 .02.17.22.2.3.1.14-.18 1.82-2.26 2.4-4.33.16-.58.93-3.63.93-3.63.45.88 1.8 1.65 3.22 1.65 4.25 0 7.13-3.87 7.13-9.05C20.5 4.15 17.18.5 12.14.5z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="https://www.linkedin.com/shareArticle?mini=true&amp;url={url}&amp;title={text}&amp;summary={text}&amp;source={url}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="https://reddit.com/submit/?url={url}&amp;resubmit=true&amp;title={text}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65 0 3-1.35 3-3s-1.35-3-3-3c-1.38 0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65 0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66 0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64 0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4 0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6 0 .23-.13.53-.05.67.2.14.23.06.54-.18.67zm.2-2.8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.97-.82 1.6-.82 1.1 0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="https://www.xing.com/app/user?op=share;url={url};title={text}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M10.2 9.7l-3-5.4C7.2 4 7 4 6.8 4h-5c-.3 0-.4 0-.5.2v.5L4 10 .4 16v.5c0 .2.2.3.4.3h5c.3 0 .4 0 .5-.2l4-6.6v-.5zM24 .2l-.5-.2H18s-.2 0-.3.3l-8 14v.4l5.2 9c0 .2 0 .3.3.3h5.4s.3 0 .4-.2c.2-.2.2-.4 0-.5l-5-8.8L24 .7V.2z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="whatsapp://send?text={text}%20{url}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="https://news.ycombinator.com/submitlink?u={url}&amp;t={text}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 140 140"> <path fill-rule=evenodd d="M60.94 82.314L17 0h20.08l25.85 52.093c.397.927.86 1.888 1.39 2.883.53.994.995 2.02 1.393 3.08.265.4.463.764.596 1.095.13.334.262.63.395.898.662 1.325 1.26 2.618 1.79 3.877.53 1.26.993 2.42 1.39 3.48 1.06-2.254 2.22-4.673 3.48-7.258 1.26-2.585 2.552-5.27 3.877-8.052L103.49 0h18.69L77.84 83.308v53.087h-16.9v-54.08z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="http://vk.com/share.php?title={text}&amp;url={url}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--vk resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M21.547 7h-3.29a.743.743 0 0 0-.655.392s-1.312 2.416-1.734 3.23C14.734 12.813 14 12.126 14 11.11V7.603A1.104 1.104 0 0 0 12.896 6.5h-2.474a1.982 1.982 0 0 0-1.75.813s1.255-.204 1.255 1.49c0 .42.022 1.626.04 2.64a.73.73 0 0 1-1.272.503 21.54 21.54 0 0 1-2.498-4.543.693.693 0 0 0-.63-.403h-2.99a.508.508 0 0 0-.48.685C3.005 10.175 6.918 18 11.38 18h1.878a.742.742 0 0 0 .742-.742v-1.135a.73.73 0 0 1 1.23-.53l2.247 2.112a1.09 1.09 0 0 0 .746.295h2.953c1.424 0 1.424-.988.647-1.753-.546-.538-2.518-2.617-2.518-2.617a1.02 1.02 0 0 1-.078-1.323c.637-.84 1.68-2.212 2.122-2.8.603-.804 1.697-2.507.197-2.507z"></path> </svg> </div> </div> </a> <a class=resp-sharing-button__link href="https://telegram.me/share/url?text={text}&amp;url={url}" target=_blank rel=noopener aria-label=""> <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"> <div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 24 24"> <path d="M.707 8.475C.275 8.64 0 9.508 0 9.508s.284.867.718 1.03l5.09 1.897 1.986 6.38a1.102 1.102 0 0 0 1.75.527l2.96-2.41a.405.405 0 0 1 .494-.013l5.34 3.87a1.1 1.1 0 0 0 1.046.135 1.1 1.1 0 0 0 .682-.803l3.91-18.795A1.102 1.102 0 0 0 22.5.075L.706 8.475z"></path> </svg> </div> </div> </a> </div>
     </template>
     
-    <template id="specific-news-item.html">
-        <ons-page id="specific-news-item-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-back-button></ons-back-button>
-        </div>
-        <div class="center" id="specific-news-item-page-toolbar-title">Item</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
-            </ons-toolbar-button>
-            <ons-toolbar-button id="specific-news-item-page-toolbar-bookmark">
-                <ons-icon icon="md-bookmark-outline"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <div>
-        <div>
-            <ons-list>
-                <ons-list-item>
-                    <div class="left">
-                        <img id="specific-news-item-page-icon" class="list-item__thumbnail">
-                    </div>
-                    <div class="center">
-                        <span id="specific-news-item-page-title" class="list-item__title"></span>
-                        <span class="list-item__subtitle">
-                            <div id="specific-news-item-page-feed-title"></div>
-                            <div id="specific-news-item-page-author"></div>
-                            <div id="specific-news-item-page-time"></div>
-                        </span>
-                    </div>
-                    <div class="right">
-                        <ons-fab id="specific-news-item-page-link-fab" modifier="mini">
-                            <ons-icon icon="md-link"></ons-icon>
-                        </ons-fab>
-                    </div>
-                </ons-list-item>
-                <div id="specific-news-item-page-enclosures" style="width: 100%"></div>
-                <ons-list-item>
-                    <div class="center">
-                        <div id="specific-news-item-page-description" class="user-select-text" style="width: 100%"></div>
-                    </div>
-                </ons-list-item>
-                <ons-list-item>
-                    <div class="center">
-                        <div id="specific-news-item-page-content" class="user-select-text" style="width: 100%"></div>
-                        <a data-inappbrowser="true" id="specific-news-item-page-content-link" style="display: none" class="button--material button" target="_system">
-                            <ons-icon icon="md-link"></ons-icon> <span data-localized-message="viewEntireArticle">View entire article</span>
-                        </a>
-                    </div>
-                </ons-list-item>
-            </ons-list>
-        </div>
-    </div>
-</ons-page>
+    <template id=specific-feed.html>
+        <ons-page id=specific-feed-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center id=specific-feed-page-toolbar-feed-title>Feed</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help></ons-icon> </ons-toolbar-button> <ons-toolbar-button id=specific-feed-page-toolbar-favorite> <ons-icon icon=md-star-outline></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <div id=specific-feed-page-content> <ons-list> <ons-list-item> <div class=left> <img id=specific-feed-page-icon class=list-item__thumbnail> </div> <div class=center> <span id=specific-feed-page-title class=list-item__title></span> <span class=list-item__subtitle style=opacity:1> <span id=specific-feed-page-description class=user-select-text></span> <br> <ons-button id=specific-feed-page-unsubscribe data-localized-message=unsubscribe>Unsubscribe</ons-button> &nbsp; <ons-fab id=specific-feed-page-link-fab modifier=mini> <ons-icon icon=md-link></ons-icon> </ons-fab> </span> </div> </ons-list-item> <ons-list-header data-localized-message=news>News</ons-list-header> <ons-lazy-repeat id=specific-feed-page-lazy-items></ons-lazy-repeat> </ons-list> </div> </div> </ons-page>
     </template>
     
-    <template id="splitter.html">
-        <ons-page id="splitter">
-    <ons-splitter>
-        <ons-splitter-side id="menu" side="left" width="280px" collapse="" swipeable="">
-            <ons-page id="splitter-side-content">
-                <ons-list>
-                    <ons-list-item data-page-load="news.html" tappable="">
-                        <div class="left">
-                            <ons-icon icon="md-email-open"></ons-icon>
-                        </div>
-                        <div class="center" data-localized-message="myFeed">My Feed</div>
-                    </ons-list-item>
-                    <ons-list-item data-push-page="add-feed-tabbar.html" tappable="">
-                        <div class="left">
-                            <ons-icon icon="md-search"></ons-icon>
-                        </div>
-                        <div class="center" data-localized-message="addFeed">Add Feed</div>
-                    </ons-list-item>
-                    <ons-list-item tappable="" expandable="">
-                        <div class="expandable-content">
-                            <ons-list>
-                                <ons-list-item tappable="" data-page-load="favorites.html">
-                                    <div class="left">
-                                        <ons-icon icon="md-folder-star"></ons-icon>
-                                    </div>
-                                    <div class="center" data-localized-message="favorites">Favorites</div>
-                                </ons-list-item>
-                                <div id="splitter-category-items"></div>
-                                <ons-list-item id="push-category-html" tappable="">
-
-                                    <div class="left">
-                                        <ons-icon icon="md-folder-outline"></ons-icon>
-                                    </div>
-                                    <div class="center" data-localized-message="uncategorized">Uncategorized</div>
-                                </ons-list-item>
-                                <ons-list-item tappable="" id="push-add-category-html">
-
-                                    <div class="left">
-                                        <ons-icon icon="md-plus-circle"></ons-icon>
-                                    </div>
-                                    <div class="center" data-localized-message="createCategory">Create Category</div>
-                                </ons-list-item>
-                            </ons-list>
-                        </div>
-                        <div class="left">
-                            <ons-icon icon="md-folder"></ons-icon>
-                        </div>
-                        <div class="center" data-localized-message="categories">
-                            Categories
-                        </div>
-                    </ons-list-item>
-                    <ons-list-item data-page-load="bookmarks.html" tappable="">
-                        <div class="left">
-                            <ons-icon icon="md-book"></ons-icon>
-                        </div>
-                        <div class="center" data-localized-message="bookmarks">Bookmarks</div>
-                    </ons-list-item>
-                    <ons-list-item data-page-load="feeds.html" tappable="">
-                        <div class="left">
-                            <ons-icon icon="md-collection-text"></ons-icon>
-                        </div>
-                        <div class="center" data-localized-message="feeds">Feeds</div>
-                    </ons-list-item>
-                    <ons-list-item data-page-load="recommended.html" tappable="">
-                        <div class="left">
-                            <ons-icon icon="md-badge-check"></ons-icon>
-                        </div>
-                        <div class="center" data-localized-message="recommended">Recommended</div>
-                    </ons-list-item>
-
-                    <div id="splitter-install-container"></div>
-                    <ons-list-item data-page-load="storage.html" tappable="">
-                        <div class="left">
-                            <ons-icon icon="md-storage"></ons-icon>
-                        </div>
-                        <div class="center" data-localized-message="storage">Storage</div>
-                    </ons-list-item>
-                    <ons-list-item data-page-load="settings.html" tappable="">
-                        <div class="left">
-                            <ons-icon icon="md-settings"></ons-icon>
-                        </div>
-                        <div class="center" data-localized-message="settings">Settings</div>
-                    </ons-list-item>
-                    <ons-list-item data-push-page="about.html" tappable="">
-                        <div class="left">
-                            <ons-icon icon="md-info-outline"></ons-icon>
-                        </div>
-                        <div class="center" data-localized-message="about">About</div>
-                    </ons-list-item>
-                </ons-list>
-            </ons-page>
-        </ons-splitter-side>
-        <ons-splitter-content id="content" page="news.html"></ons-splitter-content>
-    </ons-splitter>
-</ons-page>
+    <template id=specific-news-item.html>
+        <ons-page id=specific-news-item-page> <ons-toolbar> <div class=left> <ons-back-button></ons-back-button> </div> <div class=center id=specific-news-item-page-toolbar-title>Item</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help class="ons-icon ion-help ons-icon--ion"></ons-icon> </ons-toolbar-button> <ons-toolbar-button id=specific-news-item-page-toolbar-bookmark> <ons-icon icon=md-bookmark-outline></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <div> <ons-list> <ons-list-item> <div class=left> <img id=specific-news-item-page-icon class=list-item__thumbnail> </div> <div class=center> <span id=specific-news-item-page-title class=list-item__title></span> <span class=list-item__subtitle> <div id=specific-news-item-page-feed-title></div> <div id=specific-news-item-page-author></div> <div id=specific-news-item-page-time></div> </span> </div> <div class=right> <ons-fab id=specific-news-item-page-link-fab modifier=mini> <ons-icon icon=md-link></ons-icon> </ons-fab> </div> </ons-list-item> <div id=specific-news-item-page-enclosures style=width:100%></div> <ons-list-item> <div class=center> <div id=specific-news-item-page-description class=user-select-text style=width:100%></div> </div> </ons-list-item> <ons-list-item> <div class=center> <div id=specific-news-item-page-content class=user-select-text style=width:100%></div> <a data-inappbrowser=true id=specific-news-item-page-content-link style=display:none class="button--material button" target=_system> <ons-icon icon=md-link></ons-icon> <span data-localized-message=viewEntireArticle>View entire article</span> </a> </div> </ons-list-item> </ons-list> </div> </div> </ons-page>
     </template>
     
-    <template id="starred-category.html">
+    <template id=splitter.html>
+        <ons-page id=splitter> <ons-splitter> <ons-splitter-side id=menu side=left width=280px collapse swipeable> <ons-page id=splitter-side-content> <ons-list> <ons-list-item class=list-item-banner> <div class=inner> <small><span data-localized-message=lastUpdated>Last updated:</span> <span id=last-updated-timeago></span></small> </div> </ons-list-item> <ons-list-item data-page-load=news.html tappable> <div class=left> <ons-icon icon=md-email-open></ons-icon> </div> <div class=center data-localized-message=myFeed>My Feed</div> </ons-list-item> <ons-list-item data-push-page=add-feed-tabbar.html tappable> <div class=left> <ons-icon icon=md-search></ons-icon> </div> <div class=center data-localized-message=addFeed>Add Feed</div> </ons-list-item> <ons-list-item tappable expandable> <div class=expandable-content> <ons-list> <ons-list-item tappable data-page-load=favorites.html> <div class=left> <ons-icon icon=md-folder-star></ons-icon> </div> <div class=center data-localized-message=favorites>Favorites</div> </ons-list-item> <div id=splitter-category-items></div> <ons-list-item id=push-category-html tappable> <div class=left> <ons-icon icon=md-folder-outline></ons-icon> </div> <div class=center data-localized-message=uncategorized>Uncategorized</div> </ons-list-item> <ons-list-item tappable id=push-add-category-html> <div class=left> <ons-icon icon=md-plus-circle></ons-icon> </div> <div class=center data-localized-message=createCategory>Create Category</div> </ons-list-item> </ons-list> </div> <div class=left> <ons-icon icon=md-folder></ons-icon> </div> <div class=center data-localized-message=categories> Categories </div> </ons-list-item> <ons-list-item data-page-load=bookmarks.html tappable> <div class=left> <ons-icon icon=md-book></ons-icon> </div> <div class=center data-localized-message=bookmarks>Bookmarks</div> </ons-list-item> <ons-list-item data-page-load=feeds.html tappable> <div class=left> <ons-icon icon=md-collection-text></ons-icon> </div> <div class=center data-localized-message=feeds>Feeds</div> </ons-list-item> <ons-list-item data-page-load=recommended.html tappable> <div class=left> <ons-icon icon=md-badge-check></ons-icon> </div> <div class=center data-localized-message=recommended>Recommended</div> </ons-list-item> <div id=splitter-install-container></div> <ons-list-item data-page-load=storage.html tappable> <div class=left> <ons-icon icon=md-storage></ons-icon> </div> <div class=center data-localized-message=storage>Storage</div> </ons-list-item> <ons-list-item data-page-load=settings.html tappable> <div class=left> <ons-icon icon=md-settings></ons-icon> </div> <div class=center data-localized-message=settings>Settings</div> </ons-list-item> <ons-list-item data-push-page=about.html tappable> <div class=left> <ons-icon icon=md-info-outline></ons-icon> </div> <div class=center data-localized-message=about>About</div> </ons-list-item> </ons-list> </ons-page> </ons-splitter-side> <ons-splitter-content id=content page=news.html></ons-splitter-content> </ons-splitter> </ons-page>
+    </template>
+    
+    <template id=starred-category.html>
         
     </template>
     
-    <template id="storage.html">
-        <ons-page id="storage-page">
-    <ons-toolbar>
-        <div class="left">
-            <ons-toolbar-button data-splitter-open="">
-                <ons-icon icon="md-menu"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-        <div class="center" data-localized-message="storage">Storage</div>
-        <div class="right">
-            <ons-toolbar-button data-push-page="about.html">
-                <ons-icon icon="ion-help" class="ons-icon ion-help ons-icon--ion"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <div>
-        <ons-list>
-            <ons-list-item id="storage-quota" style="display: none">
-                <div class="left">
-                    <ons-icon icon="md-storage"></ons-icon>
-                </div>
-                <div class="center">
-                    <div id="storage-quota-bar"></div>
-                    <div>
-                        Using <span id="storage-usage-percentage"></span> out of total availiable storage.<br>
-                        <span id="storage-usage"></span>&nbsp;used out of&nbsp;<span id="storage-limit"></span>&nbsp;availiable.<br>
-                    </div>
-                </div>
-            </ons-list-item>
-            <ons-list-item>
-                <div style="width: 100%">
-                    <div class="ct-chart ct-minor-seventh"></div>
-                </div>
-            </ons-list-item>
-            <div id="storage-app-items">
-
-            </div>
-            <ons-list-header>Other</ons-list-header>
-            <ons-list-item id="favorite-storage">
-                <div class="left">
-                    <ons-icon icon="md-book"></ons-icon>
-                </div>
-                <div class="center">
-                    <div class="user-select-text" data-localized-message="favorites">
-                        Favorites
-                    </div>
-                </div>
-                <div class="right" id="favorite-storage-amount"></div>
-            </ons-list-item>
-            <ons-list-item id="bookmark-storage">
-                <div class="left">
-                    <ons-icon icon="md-star"></ons-icon>
-                </div>
-                <div class="center">
-                    <div class="user-select-text" data-localized-message="bookmarks">
-                        Bookmarks
-                    </div>
-                </div>
-                <div class="right" id="bookmark-storage-amount"></div>
-            </ons-list-item>
-            <ons-list-item>
-                <div class="center">
-                    <div class="user-select-text">
-                        <p>
-                            <span data-localized-message="theOther">The other</span> <span id="other-storage-bytes"></span> 
-                            <span data-localized-message="cachedFilesDisclaimer">
-                                are cached files,
-                                it's wise not to remove these files because they drastically
-                                improve performance(page loading). These cached files are application files
-                                that are not subject to change (for long periods of time). Caching these files
-                                is a good idea because your browser doesn't have to load
-                                the whole app every time you open the page.
-                            </span>
-                        </p>
-                        <p>
-                            <span data-localized-message="cachedFilesWarning">
-                                If you do want to remove cached files, be carefull.
-                                If you remove "website data" from your browser you
-                                could be removing your feeds and category information.
-                                Please backup your files by downloading your feeds onto an OPML file.
-                            </span>
-                        </p>
-                        <ons-button data-push-page="download-opml.html">Download OPML</ons-button>
-                        <p data-localized-message="weDontUseCookiesExceptForAnonymizedAnalytics">
-                            We don't use cookies except for anonymized analytics.
-                        </p>
-                        <p>
-                            <a target="_system" href="https://esstudio.site/contact" data-localized-message="contactUs">Contact us.</a>
-                        </p>
-                    </div>
-                </div>
-            </ons-list-item>
-
-        </ons-list>
-    </div>
-</ons-page>
+    <template id=storage.html>
+        <ons-page id=storage-page> <ons-toolbar> <div class=left> <ons-toolbar-button data-splitter-open> <ons-icon icon=md-menu></ons-icon> </ons-toolbar-button> </div> <div class=center data-localized-message=storage>Storage</div> <div class=right> <ons-toolbar-button data-push-page=about.html> <ons-icon icon=ion-help class="ons-icon ion-help ons-icon--ion"></ons-icon> </ons-toolbar-button> </div> </ons-toolbar> <div> <ons-list> <ons-list-item id=storage-quota style=display:none> <div class=left> <ons-icon icon=md-storage></ons-icon> </div> <div class=center> <div id=storage-quota-bar></div> <div> Using <span id=storage-usage-percentage></span> out of total availiable storage.<br> <span id=storage-usage></span>&nbsp;used out of&nbsp;<span id=storage-limit></span>&nbsp;availiable.<br> </div> </div> </ons-list-item> <ons-list-item> <div style=width:100%> <div class="ct-chart ct-minor-seventh"></div> </div> </ons-list-item> <div id=storage-app-items> </div> <ons-list-header>Other</ons-list-header> <ons-list-item id=favorite-storage> <div class=left> <ons-icon icon=md-book></ons-icon> </div> <div class=center> <div class=user-select-text data-localized-message=favorites> Favorites </div> </div> <div class=right id=favorite-storage-amount></div> </ons-list-item> <ons-list-item id=bookmark-storage> <div class=left> <ons-icon icon=md-star></ons-icon> </div> <div class=center> <div class=user-select-text data-localized-message=bookmarks> Bookmarks </div> </div> <div class=right id=bookmark-storage-amount></div> </ons-list-item> <ons-list-item> <div class=center> <div class=user-select-text> <p> <span data-localized-message=theOther>The other</span> <span id=other-storage-bytes></span> <span data-localized-message=cachedFilesDisclaimer> are cached files, it's wise not to remove these files because they drastically improve performance(page loading). These cached files are application files that are not subject to change (for long periods of time). Caching these files is a good idea because your browser doesn't have to load the whole app every time you open the page. </span> </p> <p> <span data-localized-message=cachedFilesWarning> If you do want to remove cached files, be carefull. If you remove "website data" from your browser you could be removing your feeds and category information. Please backup your files by downloading your feeds onto an OPML file. </span> </p> <ons-button data-push-page=download-opml.html>Download OPML</ons-button> <p data-localized-message=weDontUseCookiesExceptForAnonymizedAnalytics> We don't use cookies except for anonymized analytics. </p> <p> <a target=_system href=https://esstudio.site/contact data-localized-message=contactUs>Contact us.</a> </p> </div> </div> </ons-list-item> </ons-list> </div> </ons-page>
     </template>
     
 
@@ -1526,7 +200,8 @@
                 <p class="noscript-msg" style="box-sizing: border-box; ;">
                     This website requires javascript.
                     <br>
-                    <a target="_system" href="https://www.enable-javascript.com/" class="text-primary" style="background-color: transparent; color: rgb(1, 111, 185); box-sizing: border-box; text-decoration: none; ;">
+                    <a target="_system" href="https://www.enable-javascript.com/" target="_blank" class="text-primary"
+                        style="background-color: transparent; color: rgb(1, 111, 185); box-sizing: border-box; text-decoration: none; ;">
                         You can find instructions on how to enable javascript here</a>.
                 </p>
             </div>
@@ -1559,5 +234,6 @@
         document.documentElement.setAttribute('lang', window.appUserLang);
     </script>
 <script type="text/javascript" src="app.min.js"></script></body>
+
 
 </html>
